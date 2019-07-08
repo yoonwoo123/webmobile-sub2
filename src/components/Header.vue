@@ -11,7 +11,98 @@
       <v-btn flat router :to="{name:'post'}" exact><strong>Post</strong></v-btn>
       <!-- <v-btn flat router :to="{name:'project'}" exact><strong>Project</strong></v-btn> -->
     </v-toolbar-items>
-    <v-btn class="hidden-sm-and-down" fab small @click="$router.push({name:'login'})"><v-icon size='25px' color="deep-orange">fa-user-circle</v-icon></v-btn>
+
+    <!-- Login modal pop -->
+
+    <v-btn class="hidden-sm-and-down" fab small>
+      <v-icon size='25px' color="deep-orange" @click="dialog=true">fa-user-circle</v-icon>
+    </v-btn>
+
+    <v-dialog v-model="dialog" persistent max-width="600px" >
+
+      <v-card>
+        <v-card-title>
+          <span class="headline">Login</span>
+        </v-card-title>
+        <v-card-text>
+          <v-container grid-list-md>
+            <v-layout wrap>
+              <v-flex xs12>
+                <v-text-field label="Email*" required></v-text-field>
+              </v-flex>
+              <v-flex xs12>
+                <v-text-field label="Password*" type="password" required></v-text-field>
+              </v-flex>
+            </v-layout>
+          </v-container>
+          <small>*indicates required field</small>
+        </v-card-text>
+        <v-facebook-login app-id="966242223397117"></v-facebook-login>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="blue darken-1" flat @click="dialog = false">cancel</v-btn>
+          <v-btn color="blue darken-1" flat @click="showRegister">Account</v-btn>
+          <v-btn color="blue darken-1" flat @click="">Login</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+    <v-dialog v-model="dialog2" persistent max-width="600px">
+      <v-card>
+        <v-card-title>
+          <span class="headline">Register</span>
+        </v-card-title>
+        <v-card-text>
+          <v-container grid-list-md>
+            <v-layout wrap>
+              <v-flex xs12 sm6 md4>
+                <v-text-field label="Legal first name*" required></v-text-field>
+              </v-flex>
+              <v-flex xs12 sm6 md4>
+                <v-text-field label="Legal middle name" hint="example of helper text only on focus"></v-text-field>
+              </v-flex>
+              <v-flex xs12 sm6 md4>
+                <v-text-field
+                  label="Legal last name*"
+                  hint="example of persistent helper text"
+                  persistent-hint
+                  required
+                ></v-text-field>
+              </v-flex>
+              <v-flex xs12>
+                <v-text-field label="Email*" required></v-text-field>
+              </v-flex>
+              <v-flex xs12>
+                <v-text-field label="Password*" type="password" required></v-text-field>
+              </v-flex>
+              <v-flex xs12 sm6>
+                <v-select
+                  :items="['0-17', '18-29', '30-54', '54+']"
+                  label="Age*"
+                  required
+                ></v-select>
+              </v-flex>
+              <v-flex xs12 sm6>
+                <v-autocomplete
+                  :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
+                  label="Interests"
+                  multiple
+                ></v-autocomplete>
+              </v-flex>
+            </v-layout>
+          </v-container>
+          <small>*indicates required field</small>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="blue darken-1" flat @click="dialog2 = false">Close</v-btn>
+          <v-btn color="blue darken-1" flat @click="dialog2 = false">Save</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+
+
     <v-btn class="hidden-sm-and-down" fab small @click="alertBookmark"><v-icon size='25px' color="yellow darken-1">fa-star</v-icon></v-btn>
     <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer">
     </v-toolbar-side-icon>
@@ -55,13 +146,18 @@
     </v-list-tile>
   </v-list>
   </v-navigation-drawer>
+
 </v-layout>
 </template>
 
 <script>
+import VFacebookLogin from 'vue-facebook-login-component'
 
 export default {
   name: 'Header',
+  components:{
+    VFacebookLogin
+  },
   data () {
     return {
       drawer: null,
@@ -71,12 +167,26 @@ export default {
         { title: 'Portfolio', icon: 'fa-laptop', name: 'portfolio'},
         { title: 'Post', icon: 'fa-clipboard', name: 'post' }
         // { title: 'Project', icon: 'fa-git-square' ,name:'project'}
-      ]
+      ],
+      dialog: false,
+      dialog2:false
     }
   },
   methods : {
     alertBookmark: function() {
       alert("북마크 ctrl+D")
+    },
+    showRegister:function(){
+      this.dialog = false;
+      this.dialog2 = true;
+    },
+    showLogin:function(){
+      this.dialog = true;
+      this.dialog2 = false;
+    },
+    hideModal:function(){
+      this.dialog = false;
+      this.dialog2 = false;
     }
   }
 }
