@@ -30,39 +30,6 @@
     </script>
   </head>
   <body>
-    <br />
-    <br />
-    <br />
-    <button id="upload">upload image</button>
-
-    <script type="text/javascript">
-
-    $( document ).ready(function() {
-        var form = new FormData();
-        form.append("image", "https://avatars0.githubusercontent.com/u/9919?s=280&v=4");
-
-        var settings = {
-          "url": "https://api.imgur.com/3/image",
-          "method": "POST",
-          "timeout": 0,
-          "headers": {
-            "Authorization": "Client-ID 6c4e7e9374b1faf"
-          },
-          "processData": false,
-          "mimeType": "multipart/form-data",
-          "contentType": false,
-          "data": form
-        };
-
-        $("#upload").click(function() {
-            $.ajax(settings).done(function (response) {
-              console.log(response);
-              alert(response);
-
-            });
-        });
-    });
-    </script>
     <noscript>
       <strong>We're sorry but ssafy doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>

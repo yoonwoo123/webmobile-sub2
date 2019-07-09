@@ -11,6 +11,8 @@
         <v-btn color="blue-grey lighten-4">등록하기</v-btn>
         <v-btn>취소</v-btn>
 
+
+        <img id="image" src="http://dy.gnch.or.kr/img/no-image.jpg" />
         <input name="img" type="file"/>
       </div>
       </v-flex>
@@ -19,6 +21,8 @@
 </template>
 
 <script type="text/javascript">
+var image = document.getElementById('image');
+
 function uploadImageByImgur(file, callback) {
     var form = new FormData();
     form.append('image', file);
@@ -49,39 +53,38 @@ function uploadImageByImgur(file, callback) {
 파일 변경 이벤트가 감지되면 자동으로 이미지 업로드
 
 */
+var res = []
 
 $(document).ready(function(){ // document가 모두 로드되면 실행됨
 
-$("input[name=img]").change(function(){// 사용자가 파일을 변경했을때 발생됨
+  $("input[name=img]").change(function(){// 사용자가 파일을 변경했을때 발생됨
 
-var file = this.files[0];
+    var file = this.files[0];
 
-uploadImageByImgur(file, function(result){
+    uploadImageByImgur(file, function(result){
 
-console.log(result);
+      console.log(result);
 
-console.log('업로드결과:'+result.status);
+      console.log('업로드결과:'+result.status);
 
-if(result.status!=200){
+      if(result.status!=200){
 
-result = $.parseJSON(result.responseText);
+      result = $.parseJSON(result.responseText);
+      image.src = result.data.link;
 
-}
+      }
 
-if(result.data.error){
+      if(result.data.error){
 
-console.log('지원하지않는 파일형식..');
+      console.log('지원하지않는 파일형식..');
 
-}else{
+      }else{
 
-console.log('업로드된 파일경로:'+result.data.link);
-
-}
-
-});
-
-});
-
+      console.log('업로드된 파일경로:'+result.data.link);
+      image.src = result.data.link;
+      }
+    });
+  });
 });
 
 
