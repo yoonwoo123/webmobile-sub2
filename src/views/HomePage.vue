@@ -6,6 +6,7 @@
         <strong style="font-size:10vw">Stay hungry,<br> Stay foolish!</strong>
       </div>
     </ImgBanner>
+
     <v-container>
       <!-- About Me -->
       <v-layout my-5>
@@ -55,7 +56,6 @@ import ImgBanner from '../components/ImgBanner'
 import PortfolioList from '../components/PortfolioList'
 import PostList from '../components/PostList'
 import RepositoryList from '../components/RepositoryList'
-
 
 export default {
 	name: 'HomePage',
