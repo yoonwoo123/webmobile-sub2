@@ -1,5 +1,6 @@
 <template>
   <v-footer dark class="pa-3">
+    <span>{{ weather }}  <font-awesome-icon icon="temperature-high" /> {{ temperature }}'C   <font-awesome-icon icon="tint" /> {{ humidity }}%</span>
     <v-spacer></v-spacer>
     <div>&copy;2019 — HyunGyu Yoon</div>
   </v-footer>
@@ -13,13 +14,21 @@ export default {
   data () {
     return {
       temperature: '',
+      weather:'',
     }
   },
   methods: {
     getTemperature: function () {
-      const kmaUrl = 'http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastSpaceData?ServiceKey=1n75UtuOxfMND6RAspnfGNXQGtH%2BO1OkBn%2BGsOYO5aPZ4wtm3D%2FyXmC3tg9qNYbu18lGDMik4fL%2BT2jhJh%2BlqQ%3D%3D&base_date=20190708&base_time=1400&nx=1&ny=1'
-      axios.get(kmaUrl)
-        .then(response => console.log(response))
+      const weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q=Seoul&units=metric&lang=kr&appid=9605cf8a9a7b4126fb57deb954cac4d5'
+      axios.get(weatherUrl)
+        .then(response => response.data)
+          .then((data) => {
+            this.temperature = data.main.temp
+            this.weather = data.weather[0].description
+            this.humidity = data.main.humidity
+          })
+          // .then(data => this.temperature = data.main.temp)
+            // .then(data => this.weather = data)
     }
   },
   mounted: function () {

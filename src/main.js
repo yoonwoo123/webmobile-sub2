@@ -10,7 +10,22 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 
+import axios from 'axios'
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faTemperatureHigh } from '@fortawesome/free-solid-svg-icons'
+import { faTint } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faUserSecret)
+library.add(faTemperatureHigh)
+library.add(faTint)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
+
+Vue.prototype.$http = axios
 
 Vue.use(Vuetify, {
 	iconfont: 'fa4',
