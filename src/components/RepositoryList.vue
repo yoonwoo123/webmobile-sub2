@@ -5,6 +5,9 @@
       <Repository :repos="repositories[i - 1]"></Repository>
       <v-divider></v-divider>
     </v-flex>
+    <v-flex x12  width="100%" height="300px">
+      <div class="network-graph" data-url="./gitlab-network-graph/.data/data.json" data-commit-url="https://lab.ssafy.com/hyungyu/webmobile-sub1"></div>
+    </v-flex>
   </v-layout>
 </template>
 
