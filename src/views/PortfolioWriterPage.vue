@@ -8,7 +8,7 @@
         <v-text-field label="Title" regular></v-text-field>
         <markdown-editor v-model="content" ref="markdownEditor"></markdown-editor>
         <div class="text-xs-right">
-        <v-btn color="blue-grey lighten-4">등록하기</v-btn>
+        <v-btn color="blue-grey lighten-4" @click="post">등록하기</v-btn>
         <v-btn>취소</v-btn>
 
 
@@ -93,7 +93,12 @@ export default {
 	name: 'PortfolioWriterPage',
 	components: {
 
-	}
+	},
+  methods:{
+    post:function(){
+      firebase.postPortfolio(this.title, this.body, "http://dy.gnch.or.kr/img/no-image.jpg")
+    }
+  }
 }
 
 </script>

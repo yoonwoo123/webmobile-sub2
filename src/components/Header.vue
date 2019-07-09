@@ -28,16 +28,18 @@
           <v-container grid-list-md>
             <v-layout wrap>
               <v-flex xs12>
-                <v-text-field label="Email*" required></v-text-field>
+                <v-text-field v-model="email" label="Email*" required></v-text-field>
               </v-flex>
               <v-flex xs12>
-                <v-text-field label="Password*" type="password" required></v-text-field>
+                <v-text-field v-model="password" label="Password*" type="password" required></v-text-field>
               </v-flex>
             </v-layout>
           </v-container>
           <small>*indicates required field</small>
         </v-card-text>
-        <v-facebook-login app-id="966242223397117"></v-facebook-login>
+        <v-btn color="primary" @click="signInWithFacebook">FaceBook</v-btn>
+        <v-btn color="primary" @click="signInWithGoogle">Google</v-btn>
+        <!-- <v-facebook-login app-id="966242223397117"></v-facebook-login> -->
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="blue darken-1" flat @click="dialog = false">cancel</v-btn>
@@ -70,24 +72,10 @@
                 ></v-text-field>
               </v-flex>
               <v-flex xs12>
-                <v-text-field label="Email*" required></v-text-field>
+                <v-text-field v-model="email" label="Email*" required></v-text-field>
               </v-flex>
               <v-flex xs12>
-                <v-text-field label="Password*" type="password" required></v-text-field>
-              </v-flex>
-              <v-flex xs12 sm6>
-                <v-select
-                  :items="['0-17', '18-29', '30-54', '54+']"
-                  label="Age*"
-                  required
-                ></v-select>
-              </v-flex>
-              <v-flex xs12 sm6>
-                <v-autocomplete
-                  :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
-                  label="Interests"
-                  multiple
-                ></v-autocomplete>
+                <v-text-field v-model="password" label="Password*" type="password" required></v-text-field>
               </v-flex>
             </v-layout>
           </v-container>
@@ -96,7 +84,7 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="blue darken-1" flat @click="dialog2 = false">Close</v-btn>
-          <v-btn color="blue darken-1" flat @click="dialog2 = false">Save</v-btn>
+          <v-btn color="blue darken-1" flat @click="signUp">register</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -151,12 +139,13 @@
 </template>
 
 <script>
-import VFacebookLogin from 'vue-facebook-login-component'
+// import VFacebookLogin from 'vue-facebook-login-component'
+import FirebaseService from '@/services/FirebaseService'
 
 export default {
   name: 'Header',
   components:{
-    VFacebookLogin
+    // VFacebookLogin
   },
   data () {
     return {
@@ -169,7 +158,9 @@ export default {
         // { title: 'Project', icon: 'fa-git-square' ,name:'project'}
       ],
       dialog: false,
-      dialog2:false
+      dialog2:false,
+      email:"",
+      password:""
     }
   },
   methods : {
@@ -187,8 +178,29 @@ export default {
     hideModal:function(){
       this.dialog = false;
       this.dialog2 = false;
+    },
+    signUp:function(){
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+      .catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+      });
+    },
+    async signInWithFacebook () {
+      const result = await FirebaseService.loginwithFacebook()
+      this.$store.state.accessToken = result.credential.accessToken
+      this.$store.state.user = result.user
+
+    },
+    async signInWithGoogle () {
+      const provider = new this.$firebase.auth.GoogleAuthProvider()
+      this.$firebase.auth().languageCode = 'ko'
+      const r = await this.$firebase.auth().signInwithPopup(provider)
+      consol.log(r)
+      // const result = await FirebaseService.loginWithGoogle()
+			// this.$store.state.accessToken = result.credential.accessToken
+			// this.$store.state.user = result.user
     }
   }
 }
-
 </script>
