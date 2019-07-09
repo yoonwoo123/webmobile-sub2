@@ -1,19 +1,14 @@
 <template lang="html">
-
+  <TranslateService></TranslateService>
 </template>
 
 <script>
-  import TranslateService from '@/services/TranslateService'
+  import TranslateService from './translate2'
 
   export default {
     name: 'TranslatePage',
-    methods: {
-      async quickstart() {
-        await TranslateService.quickstart()
-      }
-    },
-    mounted () {
-      this.quickstart();
+    components: {
+      TranslateService
     }
   }
 </script>
