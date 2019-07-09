@@ -1,28 +1,11 @@
 <template>
-  <v-container>
-      <v-layout>
-
-      <v-flex>
-
-        <h2 class="headline mb-3 font-weight-bold text-xs-center">Portfolio 작성</h2>
-        <v-text-field label="Title" regular></v-text-field>
-        <markdown-editor v-model="content" ref="markdownEditor"></markdown-editor>
-        <div class="text-xs-right">
-        <v-btn color="blue-grey lighten-4">등록하기</v-btn>
-        <v-btn>취소</v-btn>
-
-
-        <img id="image" src="http://dy.gnch.or.kr/img/no-image.jpg" />
-        <input name="img" type="file"/>
-
-      </div>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <div class="up">
+    <img id="image" src="http://dy.gnch.or.kr/img/no-image.jpg" />
+    <input name="img" type="file"/>
+  </div>
 </template>
 
 <script type="text/javascript">
-
 
 function uploadImageByImgur(file, callback) {
     var form = new FormData();
@@ -46,8 +29,6 @@ function uploadImageByImgur(file, callback) {
         processData: false
     }).always(callback);
 }
-
-
 
 /*
 
@@ -80,20 +61,9 @@ $(document).ready(function(){ // document가 모두 로드되면 실행됨
       }else{
       var image = document.getElementById('image');
       console.log('업로드된 파일경로:'+result.data.link);
-      console.log(image)
       image.src = result.data.link;
-      console.log(image.src)
       }
     });
   });
 });
-
-
-export default {
-	name: 'PortfolioWriterPage',
-	components: {
-
-	}
-}
-
 </script>
