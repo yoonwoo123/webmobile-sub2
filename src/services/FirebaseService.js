@@ -7,14 +7,12 @@ const PORTFOLIOS = 'portfolios'
 
 // Setup Firebase
 const config = {
-  apiKey: "AIzaSyA2cVZgLvIuzxpt9T-Ugv4T-cmTcdOVsZs",
-  authDomain: "vue-web2-5fd3f.firebaseapp.com",
-  databaseURL: "https://vue-web2-5fd3f.firebaseio.com",
-  projectId: "vue-web2-5fd3f",
-  storageBucket: "vue-web2-5fd3f.appspot.com",
-  messagingSenderId: "806725036229",
-  appId: "1:806725036229:web:18080892a667aaec"
-};
+	projectId: 'elice-ssafy',
+	authDomain: 'elice-ssafy.firebaseapp.com',
+	apiKey: 'AIzaSyCax1KLYHHlLEoxNkRIW8efgUBWooyEB2Q',
+	databaseURL: 'https://elice-ssafy.firebaseio.com',
+	storageBucket: 'gs://elice-ssafy.appspot.com'
+}
 
 firebase.initializeApp(config)
 const firestore = firebase.firestore()
@@ -70,24 +68,5 @@ export default {
 		}).catch(function(error) {
 			console.error('[Google Login Error]', error)
 		})
-	},
-	loginwithFacebook(){
-		var provider = new firebase.auth.FacebookAuthProvider();
-		return firebase.auth().signInWithPopup(provider).then(function(result) {
-		// This gives you a Facebook Access Token. You can use it to access the Facebook API.
-		var token = result.credential.accessToken;
-		// The signed-in user info.
-		var user = result.user;
-		// ...
-		}).catch(function(error) {
-			// Handle Errors here.
-			var errorCode = error.code;
-			var errorMessage = error.message;
-			// The email of the user's account used.
-			var email = error.email;
-			// The firebase.auth.AuthCredential type that was used.
-			var credential = error.credential;
-			// ...
-		});
 	}
 }
