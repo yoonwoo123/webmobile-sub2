@@ -7,7 +7,7 @@
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
       <!-- <v-btn flat @click="$router.push({name:'portfolio'})"><strong>Portfolio</strong></v-btn> -->
-      <img v-if="img != null" :src="img"/>
+      <img v-if="img != null" src="https://graph.facebook.com/1601416299993363/picture"/>
       <div v-if="name != null">{{name}}</div>
       <v-btn flat v-if="name != null" @click="logout" exact><strong>Logout</strong></v-btn>
 
