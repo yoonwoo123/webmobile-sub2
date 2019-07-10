@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-img id="image" :src="imgSrc"
+    <v-img id="" :src="imgSrc"
            aspect-ratio="1.7" v-resize="resize"  v-bind:style="{height:newHeight}">
       <v-layout align-center justify-center row fill-height>
         <v-flex text-xs-center >
@@ -10,7 +10,7 @@
         </v-flex>
       </v-layout>
     </v-img>
-    <input name="img" type="file"/>
+    <!-- <input name="img" type="file"/> -->
   </div>
 </template>
 

@@ -1,8 +1,8 @@
 // import Translate from '@google-cloud/translate'
 
 const projectId = 'blogdevelop-1562557566547';
-const Translate = require('@google-cloud/translate');
-const translate = new Translate.Translate({ projectId: projectId, });
+// const Translate = require('@google-cloud/translate');
+// const translate = new Translate.Translate({ projectId: projectId, });
 
 const text = 'Hello, world!';
 const target = 'ru';

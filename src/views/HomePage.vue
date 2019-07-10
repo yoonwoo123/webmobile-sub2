@@ -1,11 +1,15 @@
 <template>
   <div>
     <!-- <Header></Header> -->
-    <ImgBanner imgSrc="https://source.unsplash.com/1600x900/?newyork">
+    <ImgBanner id="image" class="" imgSrc="https://source.unsplash.com/1600x900/?newyork">
       <div style="line-height:1.2em;" slot="text" class="display-3 font-weight-black">
         <strong style="font-size:10vw">Stay hungry,<br> Stay foolish!</strong>
       </div>
     </ImgBanner>
+    <div class="filebox">
+      <label for="ex-file">배너 변경하기</label>
+      <input id="ex-file" name="img" type="file"/>
+    </div>
 
     <v-container>
       <!-- About Me -->
@@ -49,6 +53,8 @@
     </Footer> -->
   </div>
 </template>
+
+
 
 <script>
 
@@ -97,5 +103,38 @@ export default {
   .t-auto{
     font-size: 32px!important;
   }
+}
+.filebox label {
+  display: inline-block;
+  padding: .5em .75em;
+  color: #fff;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #5cb85c;
+  cursor: pointer;
+  border: 1px solid #4cae4c;
+  border-radius: .25em;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.filebox label:hover {
+  background-color: #6ed36e;
+}
+
+.filebox label:active {
+  background-color: #367c36;
+}
+
+.filebox input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 </style>
