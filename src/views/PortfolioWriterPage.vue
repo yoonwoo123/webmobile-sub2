@@ -23,7 +23,6 @@
 
 <script type="text/javascript">
 
-
 function uploadImageByImgur(file, callback) {
     var form = new FormData();
     form.append('image', file);
@@ -47,47 +46,40 @@ function uploadImageByImgur(file, callback) {
     }).always(callback);
 }
 
-
-
 /*
-
 파일 변경 이벤트가 감지되면 자동으로 이미지 업로드
-
 */
 
 $(document).ready(function(){ // document가 모두 로드되면 실행됨
-
   $("input[name=img]").change(function(){// 사용자가 파일을 변경했을때 발생됨
-
     var file = this.files[0];
-
     uploadImageByImgur(file, function(result){
-
       console.log(result);
-
       console.log('업로드결과:'+result.status);
 
       if(result.status!=200){
-
       result = $.parseJSON(result.responseText);
-
       }
 
       if(result.data.error){
-
       console.log('지원하지않는 파일형식..');
 
       }else{
       var image = document.getElementById('image');
+      var vim = image.getElementsByClassName('v-image__image--cover')
+      // var vim = document.getElementsByClassName('v-image')
       console.log('업로드된 파일경로:'+result.data.link);
-      console.log(image)
+      console.log(image);
+      // var vim = $(".vv").hide();
+      console.log(vim[0].style['backgroundImage']);
+      // console.log(vim[0])
+      vim[0].style['backgroundImage'] = 'url(' + result.data.link + ')';
       image.src = result.data.link;
-      console.log(image.src)
+      // console.log(image.src)
       }
     });
   });
 });
-
 
 export default {
 	name: 'PortfolioWriterPage',
