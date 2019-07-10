@@ -1,6 +1,6 @@
 <template>
   <v-footer dark class="pa-3">
-    <!-- <span>{{ weather }}  <font-awesome-icon icon="temperature-high" /> {{ temperature }}'C   <font-awesome-icon icon="tint" /> {{ humidity }}%</span> -->
+    <span>{{ weather }}  <font-awesome-icon icon="temperature-high" /> {{ temperature }}'C   <font-awesome-icon icon="tint" /> {{ humidity }}%</span>
     <v-spacer></v-spacer>
     <div>&copy;2019 — HyunGyu Yoon</div>
   </v-footer>
