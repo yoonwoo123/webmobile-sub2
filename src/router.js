@@ -5,7 +5,7 @@ import PostPage from './views/PostPage.vue'
 import PortfolioPage from './views/PortfolioPage.vue'
 import PortfolioWriterPage from './views/PortfolioWriterPage.vue'
 import LoginPage from './views/LoginPage.vue'
-import TranslatePage from './components/translate.vue'
+import TranslatePage from './views/TranslatePage.vue'
 
 Vue.use(Router)
 

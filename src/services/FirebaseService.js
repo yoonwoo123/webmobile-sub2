@@ -61,6 +61,7 @@ export default {
 	},
 	loginWithGoogle() {
 		let provider = new firebase.auth.GoogleAuthProvider()
+		console.log(provider)
 		return firebase.auth().signInWithPopup(provider).then(function(result) {
 			let accessToken = result.credential.accessToken
 			let user = result.user

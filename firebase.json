@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "happyhacking",
     "public": "dist",
     "ignore": [
       "firebase.json",
