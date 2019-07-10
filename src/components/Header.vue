@@ -7,6 +7,10 @@
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
       <!-- <v-btn flat @click="$router.push({name:'portfolio'})"><strong>Portfolio</strong></v-btn> -->
+      <img v-if="img != null" :src="img"/>
+      <div v-if="name != null">{{name}}</div>
+      <v-btn flat v-if="name != null" @click="logout" exact><strong>Logout</strong></v-btn>
+
       <v-btn flat router :to="{name:'portfolio'}" exact><strong>Portfolio</strong></v-btn>
       <v-btn flat router :to="{name:'post'}" exact><strong>Post</strong></v-btn>
       <!-- <v-btn flat router :to="{name:'project'}" exact><strong>Project</strong></v-btn> -->
@@ -37,14 +41,16 @@
           </v-container>
           <small>*indicates required field</small>
         </v-card-text>
-        <v-btn color="primary" @click="signInWithFacebook">FaceBook</v-btn>
-        <v-btn color="primary" @click="signInWithGoogle">Google</v-btn>
+        <v-btn round dark v-on:click="loginWithGoogle" ><v-icon size="25" class="mr-2">fa-google</v-icon> Google 로그인</v-btn>
+        <v-btn color="primary" round dark v-on:click="loginWithFacebook" ><v-icon size="25" class="mr-2">fa-facebook</v-icon> Facebook 로그인</v-btn>
         <!-- <v-facebook-login app-id="966242223397117"></v-facebook-login> -->
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="blue darken-1" flat @click="dialog = false">cancel</v-btn>
           <v-btn color="blue darken-1" flat @click="showRegister">Account</v-btn>
-          <v-btn color="blue darken-1" flat @click="">Login</v-btn>
+          <v-btn color="blue darken-1" flat @click="loginWithMail">Login</v-btn>
+          <v-btn color="blue darken-1" flat @click="logout">logout</v-btn>
+          <v-btn color="blue darken-1" flat @click="loginCheck">check</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -160,7 +166,9 @@ export default {
       dialog: false,
       dialog2:false,
       email:"",
-      password:""
+      password:"",
+      name:null,
+      img:null
     }
   },
   methods : {
@@ -186,21 +194,43 @@ export default {
         var errorMessage = error.message;
       });
     },
-    async signInWithFacebook () {
-      const result = await FirebaseService.loginwithFacebook()
-      this.$store.state.accessToken = result.credential.accessToken
-      this.$store.state.user = result.user
-
+    async loginWithGoogle() {
+			const result = await FirebaseService.loginWithGoogle()
+			this.$store.state.accessToken = result.credential.accessToken
+			this.$store.state.user = result.user
+      this.name = this.$store.state.user.displayName
+      this.img = this.$store.state.user.photoURL
+      console.log(this.$store.state.user)
+		},
+    async loginWithFacebook() {
+			const result = await FirebaseService.loginWithFacebook()
+			this.$store.state.accessToken = result.credential.accessToken
+			this.$store.state.user = result.user
+      this.name = this.$store.state.user.displayName
+      this.img = this.$store.state.user.photoURL
+      console.log(this.$store.state.user)
+      console.log(this.img)
+		},
+    async loginWithMail() {
+      const result = await FirebaseService.loginWithEmail(this.email, this.password)
+      console.log(result.user.displayName)
+      // console.log(result)
     },
-    async signInWithGoogle () {
-      const provider = new this.$firebase.auth.GoogleAuthProvider()
-      this.$firebase.auth().languageCode = 'ko'
-      const r = await this.$firebase.auth().signInwithPopup(provider)
-      consol.log(r)
-      // const result = await FirebaseService.loginWithGoogle()
-			// this.$store.state.accessToken = result.credential.accessToken
-			// this.$store.state.user = result.user
-    }
+    async signUp(){
+      const result = FirebaseService.registerWithEmail(this.email, this.password, "test")
+      console.log(result.user)
+    },
+    async logout(){
+      this.$store.state.accessToken = ""
+			this.$store.state.user = ""
+      this.name = null
+      this.img = null
+      FirebaseService.logout("logout Success")
+    },
+    loginCheck(){
+  		console.log(this.$store.state.user)
+      console.log(this.$store.state.accessToken)
+  	}
   }
 }
 </script>
