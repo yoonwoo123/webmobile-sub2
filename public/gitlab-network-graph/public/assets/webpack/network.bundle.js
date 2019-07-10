@@ -11090,7 +11090,7 @@ $(function() {
 
 __WEBPACK_IMPORTED_MODULE_0_raphael_raphael___default.a.prototype.commitTooltip = function commitTooltip(x, y, commit) {
   const boxWidth = 300;
-  const icon = this.image(gon.relative_url_root + commit.author.icon, x, y, 20, 20);
+  const icon = this.image(commit.author.icon, x, y, 20, 20);
   const nameText = this.text(x + 25, y + 10, commit.author.name);
   const idText = this.text(x, y + 35, commit.id);
   const messageText = this.text(x, y + 50, commit.message.replace(/\r?\n/g, ' \n '));
