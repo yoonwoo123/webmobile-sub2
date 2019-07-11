@@ -13,4 +13,5 @@ body {
 
   .network-graph svg {
     margin-bottom: -4px; /* Remove whitespace at the bottom of the page. */
+    width: 100%;
   }

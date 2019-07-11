@@ -6,10 +6,7 @@
         <strong style="font-size:10vw">Stay hungry,<br> Stay foolish!</strong>
       </div>
     </ImgBanner>
-    <div class="filebox">
-      <label for="ex-file">배너 변경하기</label>
-      <input id="ex-file" name="img" type="file"/>
-    </div>
+    <ImgurBanner></ImgurBanner>
 
     <v-container>
       <!-- About Me -->
@@ -62,6 +59,8 @@ import ImgBanner from '../components/ImgBanner'
 import PortfolioList from '../components/PortfolioList'
 import PostList from '../components/PostList'
 import RepositoryList from '../components/RepositoryList'
+import Imgur from '../components/Imgur'
+import ImgurBanner from '../components/ImgurBanner'
 
 export default {
 	name: 'HomePage',
@@ -69,7 +68,9 @@ export default {
 		ImgBanner,
 		PortfolioList,
 		PostList,
-		RepositoryList
+		RepositoryList,
+    Imgur,
+    ImgurBanner
 	},
 	methods: {
 		getImgUrl(img) {

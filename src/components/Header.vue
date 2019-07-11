@@ -7,8 +7,13 @@
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
       <!-- <v-btn flat @click="$router.push({name:'portfolio'})"><strong>Portfolio</strong></v-btn> -->
-      <img v-if="img != null" src="https://graph.facebook.com/1601416299993363/picture"/>
-      <div v-if="name != null">{{name}}</div>
+
+      <v-toolbar-title v-if="name!=null" @click="$router.push({name:'home'})"  style="width:inherit; height:100%; display:flex">
+          <div class="profile_icon" style="align-items: center;display: flex; margin:auto">
+            <img v-if="img!=null" :src="img" style="margin:5px; float:left; width:35px; border-radius:50%"/>
+            <span style="float:left; margin:5px; font-weight:bold; font-size:17px;">{{name}}</span>
+          </div>
+      </v-toolbar-title>
       <v-btn flat v-if="name != null" @click="logout" exact><strong>Logout</strong></v-btn>
 
       <v-btn flat router :to="{name:'portfolio'}" exact><strong>Portfolio</strong></v-btn>
@@ -18,12 +23,12 @@
 
     <!-- Login modal pop -->
 
-    <v-btn class="hidden-sm-and-down" fab small>
+    <v-btn v-if="name == null" class="hidden-sm-and-down" fab small>
       <v-icon size='25px' color="deep-orange" @click="dialog=true">fa-user-circle</v-icon>
     </v-btn>
 
+    <!-- login form -->
     <v-dialog v-model="dialog" persistent max-width="600px" >
-
       <v-card>
         <v-card-title>
           <span class="headline">Login</span>
@@ -55,6 +60,7 @@
       </v-card>
     </v-dialog>
 
+    <!-- register form -->
     <v-dialog v-model="dialog2" persistent max-width="600px">
       <v-card>
         <v-card-title>
@@ -102,12 +108,7 @@
     </v-toolbar-side-icon>
   </v-toolbar>
 
-  <v-navigation-drawer
-    v-model="drawer"
-    fixed
-    temporary
-    right
-  >
+  <v-navigation-drawer v-model="drawer" fixed temporary right >
   <v-toolbar flat>
     <v-icon color='pink' size="30px" @click.stop="drawer = !drawer">fa-chevron-circle-right</v-icon>
     <v-list>
@@ -115,7 +116,6 @@
         <v-list-tile-title class="title">
           <strong>Menu</strong>
         </v-list-tile-title>
-
       </v-list-tile>
     </v-list>
     <v-btn fab small @click="alertBookmark"><v-icon size='25px' color="yellow darken-1">fa-star</v-icon></v-btn>
@@ -171,6 +171,14 @@ export default {
       img:null
     }
   },
+  mounted () {
+    if (!this.$session.exists()) {
+      this.$router.push('/')
+    } else{
+      this.name = this.$session.get("name")
+      this.img = this.$session.get("img")
+    }
+  },
   methods : {
     alertBookmark: function() {
       alert("북마크 ctrl+D")
@@ -196,36 +204,43 @@ export default {
     },
     async loginWithGoogle() {
 			const result = await FirebaseService.loginWithGoogle()
-			this.$store.state.accessToken = result.credential.accessToken
-			this.$store.state.user = result.user
-      this.name = this.$store.state.user.displayName
-      this.img = this.$store.state.user.photoURL
-      console.log(this.$store.state.user)
+      this.$session.start()
+      this.$session.set("name",result.user.displayName)
+      this.$session.set("img",result.user.photoURL)
+      this.name = this.$session.get("name")
+      this.img = this.$session.get("img")
+      console.log(this.name)
+      console.log(this.img)
+      this.hideModal()
+      this.$router.push({name:'home'})
 		},
     async loginWithFacebook() {
 			const result = await FirebaseService.loginWithFacebook()
-			this.$store.state.accessToken = result.credential.accessToken
-			this.$store.state.user = result.user
-      this.name = this.$store.state.user.displayName
-      this.img = this.$store.state.user.photoURL
-      console.log(this.$store.state.user)
+      this.$session.start()
+      this.$session.set("name",result.user.displayName)
+      this.$session.set("img",result.user.photoURL)
+      this.name = this.$session.get("name")
+      this.img = this.$session.get("img")
+      console.log(this.name)
       console.log(this.img)
+      this.hideModal()
+      this.$router.push({name:'home'})
 		},
     async loginWithMail() {
       const result = await FirebaseService.loginWithEmail(this.email, this.password)
-      console.log(result.user.displayName)
+      console.log(result.user)
       // console.log(result)
     },
     async signUp(){
       const result = FirebaseService.registerWithEmail(this.email, this.password, "test")
-      console.log(result.user)
+      console.log(result)
     },
     async logout(){
-      this.$store.state.accessToken = ""
-			this.$store.state.user = ""
       this.name = null
       this.img = null
       FirebaseService.logout("logout Success")
+      this.$session.destroy()
+      this.$router.push('/')
     },
     loginCheck(){
   		console.log(this.$store.state.user)
@@ -234,3 +249,15 @@ export default {
   }
 }
 </script>
+
+<style>
+.profile_icon{
+  padding: 0 10px;
+  border-radius: 10%;
+}
+.profile_icon:hover {
+  cursor: pointer;
+
+  background-color: rgba(0,0,0,0.12);
+}
+</style>

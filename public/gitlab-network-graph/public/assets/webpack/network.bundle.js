@@ -10690,7 +10690,8 @@ $(function() {
     ref: $(".network-graph").attr('data-ref'),
     commit_id: $(".network-graph").attr('data-commit-id')
   });
-  return new ShortcutsNetwork(network_graph.branch_graph);
+  // return new ShortcutsNetwork(network_graph.branch_graph);
+	return;
 });
 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
@@ -11018,6 +11019,9 @@ $(function() {
     for (i = j = 0, len = ref.length; j < len; i = (j += 1)) {
       parent = ref[i];
       parentCommit = this.preparedCommits[parent[0]];
+			if(typeof(parentCommit) === "undefined"){
+				return;
+			}
       parentY = this.offsetY + this.unitTime * parentCommit.time;
       parentX1 = this.offsetX + this.unitSpace * (this.mspace - parentCommit.space);
       parentX2 = this.offsetX + this.unitSpace * (this.mspace - parent[1]);

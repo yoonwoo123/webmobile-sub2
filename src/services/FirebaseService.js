@@ -101,13 +101,24 @@ export default {
   },
 	registerWithEmail(email, password, name){
 		console.log(email+password+name)
-    return firebase.auth().createUserWithEmailAndPassword(email, password)
+  	firebase.auth().createUserWithEmailAndPassword(email, password)
 		.catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
       // ...
+			console.log(error)
     })
+		var user = firebase.auth().currentUser;
+		user.updateProfile({
+		  displayName: "Jane Q. Userssss",
+		  photoURL: "https://example.com/jane-q-user/profile.jpg"
+		}).then(function() {
+		  // Update successful.
+		}).catch(function(error) {
+		  // An error happened.
+		});
+		return user
 	},
 	logout(text){
 		firebase.auth().signOut().then(function() {
