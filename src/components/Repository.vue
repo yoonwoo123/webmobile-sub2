@@ -29,7 +29,7 @@ export default {
   },
 	methods: {
 		async drawStatGraph() {
-			this.commits = await GitlabService.getCommits(this.repos.id)
+			// this.commits = await GitlabService.getCommits(this.repos.id)
 		}
 	}
 }

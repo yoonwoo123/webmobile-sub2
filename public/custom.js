@@ -8,7 +8,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
   setTimeout( function() {
 
     // Extend the graph to cover the full available screen space.
-    document.getElementsByClassName( 'network-graph' )[0].style.height = document.documentElement.clientHeight + 'px';
+    document.getElementsByClassName( 'network-graph' )[0].style.height = 400 + 'px';
 
   }, 0 );
 
