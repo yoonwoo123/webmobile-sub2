@@ -61,6 +61,12 @@ export default {
 			created_at: firebase.firestore.FieldValue.serverTimestamp()
 		})
 	},
+	logging(path) {
+		return firestore.collection('LOG').add({
+			path,
+			created_at: firebase.firestore.FieldValue.serverTimestamp()
+		})
+	},
 	loginWithGoogle() {
 		let provider = new firebase.auth.GoogleAuthProvider()
 		console.log(provider)

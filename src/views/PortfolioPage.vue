@@ -19,6 +19,7 @@
 <script>
 import ImgBanner from '../components/ImgBanner'
 import PortfolioList from '../components/PortfolioList'
+import FirebaseService from '@/services/FirebaseService'
 
 export default {
 	name: 'PortfolioPage',
@@ -26,5 +27,20 @@ export default {
 		ImgBanner,
 		PortfolioList,
 	},
+  created () {
+    console.log('created')
+  },
+  mounted () {
+    // console.log(this)
+    // var temp = this.location['href']
+    // console.log(this.$route)
+    FirebaseService.logging(this.$route['path'])
+  },
+  updated () {
+    console.log('updated')
+  },
+  beforeDestroy () {
+    console.log('bd')
+  }
 }
 </script>
