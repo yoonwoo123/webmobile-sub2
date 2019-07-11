@@ -25,7 +25,7 @@ export default {
 		}
 	},
   mounted() {
-		this.drawStatGraph()
+		// this.drawStatGraph()
   },
 	methods: {
 		async drawStatGraph() {
