@@ -51,11 +51,11 @@
         <!-- <v-facebook-login app-id="966242223397117"></v-facebook-login> -->
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="blue darken-1" flat @click="dialog = false">cancel</v-btn>
+          <v-btn color="blue darken-1" flat @click="dialog = false">Cancel</v-btn>
           <v-btn color="blue darken-1" flat @click="showRegister">Account</v-btn>
           <v-btn color="blue darken-1" flat @click="loginWithMail">Login</v-btn>
-          <v-btn color="blue darken-1" flat @click="logout">logout</v-btn>
-          <v-btn color="blue darken-1" flat @click="loginCheck">check</v-btn>
+          <!-- <v-btn color="blue darken-1" flat @click="logout">logout</v-btn> -->
+          <!-- <v-btn color="blue darken-1" flat @click="loginCheck">check</v-btn> -->
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -70,24 +70,13 @@
           <v-container grid-list-md>
             <v-layout wrap>
               <v-flex xs12 sm6 md4>
-                <v-text-field label="Legal first name*" required></v-text-field>
-              </v-flex>
-              <v-flex xs12 sm6 md4>
-                <v-text-field label="Legal middle name" hint="example of helper text only on focus"></v-text-field>
-              </v-flex>
-              <v-flex xs12 sm6 md4>
-                <v-text-field
-                  label="Legal last name*"
-                  hint="example of persistent helper text"
-                  persistent-hint
-                  required
-                ></v-text-field>
+                <v-text-field v-model="cname" label="your name" required></v-text-field>
               </v-flex>
               <v-flex xs12>
-                <v-text-field v-model="email" label="Email*" required></v-text-field>
+                <v-text-field v-model="cemail" label="Email*" required></v-text-field>
               </v-flex>
               <v-flex xs12>
-                <v-text-field v-model="password" label="Password*" type="password" required></v-text-field>
+                <v-text-field v-model="cpassword" label="Password*" type="password" required></v-text-field>
               </v-flex>
             </v-layout>
           </v-container>
@@ -145,14 +134,10 @@
 </template>
 
 <script>
-// import VFacebookLogin from 'vue-facebook-login-component'
 import FirebaseService from '@/services/FirebaseService'
 
 export default {
   name: 'Header',
-  components:{
-    // VFacebookLogin
-  },
   data () {
     return {
       drawer: null,
@@ -165,10 +150,13 @@ export default {
       ],
       dialog: false,
       dialog2:false,
-      email:"",
-      password:"",
+      email:null,
+      password:null,
       name:null,
-      img:null
+      img:null,
+      cname:null,
+      cemail:null,
+      cpassword:null
     }
   },
   mounted () {
@@ -228,12 +216,24 @@ export default {
 		},
     async loginWithMail() {
       const result = await FirebaseService.loginWithEmail(this.email, this.password)
-      console.log(result.user)
-      // console.log(result)
+      this.$session.set("name",result.user.displayName)
+      this.$session.set("img",result.user.photoURL)
+      this.name = this.$session.get("name")
+      this.img = this.$session.get("img")
+      console.log(result)
+      this.hideModal()
     },
     async signUp(){
-      const result = FirebaseService.registerWithEmail(this.email, this.password, "test")
-      console.log(result)
+      if(this.cname !=null && this.cemail !=null && this.cpassword !=null){
+        const result = await FirebaseService.registerWithEmail(this.cemail, this.cpassword)
+        FirebaseService.updateName(this.cname)
+        this.hideModal()
+        alert(this.cname + "회원님 가입을 축하합니다.")
+      }
+      else{
+        alert("회원정보를 확인해주세요!")
+      }
+
     },
     async logout(){
       this.name = null

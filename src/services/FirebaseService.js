@@ -94,8 +94,7 @@ export default {
     console.log(r)
   },
 	registerWithEmail(email, password, name){
-		console.log(email+password+name)
-  	firebase.auth().createUserWithEmailAndPassword(email, password)
+  	return firebase.auth().createUserWithEmailAndPassword(email, password)
 		.catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
@@ -103,14 +102,18 @@ export default {
       // ...
 			console.log(error)
     })
+
+	},
+	updateName(name){
 		var user = firebase.auth().currentUser;
+		console.log(user)
 		user.updateProfile({
-		  displayName: "Jane Q. Userssss",
-		  photoURL: "https://example.com/jane-q-user/profile.jpg"
+			displayName: name
+			// photoURL: "https://example.com/jane-q-user/profile.jpg"
 		}).then(function() {
-		  // Update successful.
+			// Update successful.
 		}).catch(function(error) {
-		  // An error happened.
+			console.log("[Error Message] : "+error)
 		});
 		return user
 	},
