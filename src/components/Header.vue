@@ -11,6 +11,7 @@
       <v-toolbar-title v-if="name!=null" @click="$router.push({name:'home'})"  style="width:inherit; height:100%; display:flex">
           <div class="profile_icon" style="align-items: center;display: flex; margin:auto">
             <img v-if="img!=null" :src="img" style="margin:5px; float:left; width:35px; border-radius:50%"/>
+            <img v-if="img==null" src="/img/icons/apple-touch-icon.png" style="margin:5px; float:left; width:35px; border-radius:50%"/>
             <span style="float:left; margin:5px; font-weight:bold; font-size:17px;">{{name}}</span>
           </div>
       </v-toolbar-title>
