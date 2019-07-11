@@ -2,6 +2,8 @@
   <div class="filebox">
     <label for="ex-file">배너 변경하기</label>
     <input id="ex-file" name="img" type="file"/>
+    <v-btn @click="randomimage">배너를 랜덤으로</v-btn>
+    <v-btn @click="customimage">배너를 커스텀으로</v-btn>
   </div>
 </template>
 
@@ -64,17 +66,42 @@ export default {
           console.log('지원하지않는 파일형식..');
 
           }else{
-          var image = document.getElementById('image');
+          this.cuslink = result.data.link
+          console.log(this.cuslink)
+          this.image = document.getElementById('image');
           // console.log('업로드된 파일경로:'+result.data.link);
           // image.src = result.data.link;
-          var vim = image.getElementsByClassName('v-image__image--cover')
+          this.vim = this.image.getElementsByClassName('v-image__image--cover')
           //       // var vim = $(".vv").hide();
-          console.log(vim[0].style['backgroundImage']);
-          vim[0].style['backgroundImage'] = 'url(' + result.data.link + ')';
+          console.log(this.vim[0].style['backgroundImage']);
+          this.vim[0].style['backgroundImage'] = 'url(' + this.cuslink + ')';
           }
         });
       });
     });
+  },
+  methods: {
+    randomimage() {
+      this.image = document.getElementById('image');
+      this.vim = this.image.getElementsByClassName('v-image__image--cover')
+      console.log(this.vim)
+      this.vim[0].style['backgroundImage'] = 'url(https://source.unsplash.com/1600x900/?newyork)';
+    },
+    customimage() {
+      console.log(this.res)
+      this.image = document.getElementById('image');
+      this.vim = this.image.getElementsByClassName('v-image__image--cover')
+      console.log(this.vim)
+      this.vim[0].style['backgroundImage'] = 'url(' + this.cuslink + ')';
+    }
+  },
+  data (){
+    return {
+      image:null,
+      vim:null,
+      cuslink:null
+      // res:null
+    }
   }
 }
 </script>
