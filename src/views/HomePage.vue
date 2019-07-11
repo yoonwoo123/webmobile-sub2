@@ -54,7 +54,7 @@
 
 
 <script>
-
+import FirebaseService from '@/services/FirebaseService'
 import ImgBanner from '../components/ImgBanner'
 import PortfolioList from '../components/PortfolioList'
 import PostList from '../components/PostList'
@@ -77,6 +77,9 @@ export default {
 			return require('../assets/' + img)
 		}
 	},
+  mounted () {
+    FirebaseService.logging(this.$session.get("name"), this.$route['path'])
+  }
 }
 </script>
 

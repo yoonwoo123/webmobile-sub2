@@ -61,8 +61,10 @@ export default {
 			created_at: firebase.firestore.FieldValue.serverTimestamp()
 		})
 	},
-	logging(path) {
+	logging(name, path) {
+		name = name ? name : 'Anonymous users'
 		return firestore.collection('LOG').add({
+			name,
 			path,
 			created_at: firebase.firestore.FieldValue.serverTimestamp()
 		})

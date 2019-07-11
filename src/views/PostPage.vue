@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import FirebaseService from '@/services/FirebaseService'
 import ImgBanner from '../components/ImgBanner'
 import PostList from '../components/PostList'
 import Imgur from '../components/Imgur'
@@ -31,6 +32,9 @@ export default {
 		PostList,
     Imgur,
     ImgurBanner
-	}
+	},
+  mounted () {
+    FirebaseService.logging(this.$session.get("name"), this.$route['path'])
+  }
 }
 </script>

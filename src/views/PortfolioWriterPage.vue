@@ -22,6 +22,7 @@
 </template>
 
 <script type="text/javascript">
+import FirebaseService from '@/services/FirebaseService'
 import Imgur from '../components/Imgur'
 
 // function uploadImageByImgur(file, callback) {
@@ -91,6 +92,9 @@ export default {
     post:function(){
       firebase.postPortfolio(this.title, this.body, "http://dy.gnch.or.kr/img/no-image.jpg")
     }
+  },
+  mounted () {
+    FirebaseService.logging(this.$session.get("name"), this.$route['path'])
   }
 }
 

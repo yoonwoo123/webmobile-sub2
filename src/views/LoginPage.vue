@@ -36,6 +36,7 @@ export default {
 	},
 	mounted() {
 		console.log(this.$store.state)
+    FirebaseService.logging(this.$session.get("name"), this.$route['path'])
 	}
 }
 </script>

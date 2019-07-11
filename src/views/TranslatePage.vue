@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import FirebaseService from '@/services/FirebaseService'
 import ImgBanner from '../components/ImgBanner'
 import Translate from '../components/Translate'
 export default {
@@ -16,6 +17,9 @@ export default {
   components: {
     ImgBanner,
     Translate
+  },
+  mounted () {
+    FirebaseService.logging(this.$session.get("name"), this.$route['path'])
   }
 }
 </script>

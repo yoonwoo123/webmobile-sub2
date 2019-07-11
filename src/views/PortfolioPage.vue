@@ -27,20 +27,8 @@ export default {
 		ImgBanner,
 		PortfolioList,
 	},
-  created () {
-    console.log('created')
-  },
   mounted () {
-    // console.log(this)
-    // var temp = this.location['href']
-    // console.log(this.$route)
-    FirebaseService.logging(this.$route['path'])
-  },
-  updated () {
-    console.log('updated')
-  },
-  beforeDestroy () {
-    console.log('bd')
+    FirebaseService.logging(this.$session.get("name"), this.$route['path'])
   }
 }
 </script>
