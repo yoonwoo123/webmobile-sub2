@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+import VueSession from 'vue-session'
 import 'vuetify/dist/vuetify.min.css'
 import VueSimplemde from 'vue-simplemde'
 import 'simplemde/dist/simplemde.min.css'
@@ -40,6 +41,7 @@ Vue.use(Vuetify, {
 })
 
 Vue.use(VueSimplemde)
+Vue.use(VueSession)
 
 new Vue({
   router,
