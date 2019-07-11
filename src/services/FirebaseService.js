@@ -62,7 +62,7 @@ export default {
 		})
 	},
 	logging(name, path) {
-		name = name ? name : 'Anonymous users'
+		name = name ? name : 'Anonymous user'
 		return firestore.collection('LOG').add({
 			name,
 			path,
