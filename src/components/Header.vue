@@ -7,8 +7,13 @@
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
       <!-- <v-btn flat @click="$router.push({name:'portfolio'})"><strong>Portfolio</strong></v-btn> -->
-      <img v-if="img != null" src="https://graph.facebook.com/1601416299993363/picture"/>
-      <div v-if="name != null">{{name}}</div>
+
+      <v-toolbar-title v-if="img != null && name!=null" @click="$router.push({name:'home'})"  style="width:inherit; height:100%; display:flex">
+          <div class="profile_icon" style="align-items: center;display: flex; margin:auto">
+            <img :src="img" style="margin:5px; float:left; width:35px; border-radius:50%"/>
+            <span style="float:left; margin:5px; font-weight:bold; font-size:17px;">{{name}}</span>
+          </div>
+      </v-toolbar-title>
       <v-btn flat v-if="name != null" @click="logout" exact><strong>Logout</strong></v-btn>
 
       <v-btn flat router :to="{name:'portfolio'}" exact><strong>Portfolio</strong></v-btn>
@@ -234,3 +239,15 @@ export default {
   }
 }
 </script>
+
+<style>
+.profile_icon{
+padding: 0 10px;
+border-radius: 10%;
+}
+.profile_icon:hover {
+  cursor: pointer;
+
+  background-color: rgba(0,0,0,0.12);
+}
+</style>
