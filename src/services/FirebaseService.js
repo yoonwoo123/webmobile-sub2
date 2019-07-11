@@ -66,7 +66,7 @@ export default {
 		return firestore.collection('LOG').add({
 			name,
 			path,
-			created_at: firebase.firestore.FieldValue.serverTimestamp()
+			time: firebase.firestore.FieldValue.serverTimestamp()
 		})
 	},
 	loginWithGoogle() {
