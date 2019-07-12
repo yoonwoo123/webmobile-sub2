@@ -1,14 +1,22 @@
 <template>
   <div class="filebox">
+    <!-- <ImgBanner v-bind:res="res"></ImgBanner> -->
     <input ref="inputFile" id="ex-file" name="img" type="file" style="display: none;"/>
-    <v-btn @click="randomimage">랜덤 이미지 배너</v-btn>
-    <v-btn @click="pickFile">배너 이미지 선택</v-btn>
+    <v-btn @click="randomimage">랜덤 배너</v-btn>
+    <v-btn @click="pickFile">배너 바꾸기</v-btn>
+    <v-btn @click="customimage">배너 고정</v-btn>
   </div>
 </template>
 
 <script type="text/javascript">
+import ImgBanner from '../components/ImgBanner'
+
 export default {
     name: 'ImgurBanner',
+    components: {
+      ImgBanner
+    },
+
     mounted() {
     function uploadImageByImgur(file, callback) {
         var form = new FormData();
@@ -62,15 +70,14 @@ export default {
           console.log('지원하지않는 파일형식..');
 
           }else{
-          this.cuslink = result.data.link
-          console.log(this.cuslink)
+          this.res = result.data.link
           this.image = document.getElementById('image');
           // console.log('업로드된 파일경로:'+result.data.link);
           // image.src = result.data.link;
           this.vim = this.image.getElementsByClassName('v-image__image--cover')
           //       // var vim = $(".vv").hide();
           console.log(this.vim[0].style['backgroundImage']);
-          this.vim[0].style['backgroundImage'] = 'url(' + this.cuslink + ')';
+          this.vim[0].style['backgroundImage'] = 'url(' + result.data.link + ')';
           }
         });
       });
@@ -81,25 +88,33 @@ export default {
       this.image = document.getElementById('image');
       this.vim = this.image.getElementsByClassName('v-image__image--cover')
       console.log(this.vim)
+      // this.res = this.vim[0].style['backgroundImage']
       this.vim[0].style['backgroundImage'] = 'url(https://source.unsplash.com/1600x900/?newyork)';
     },
-    customimage() {
-      console.log(this.res)
+    customimage() { // 이미지 주소를 전역변수에 할당해준다.
+      // console.log(this.res)
       this.image = document.getElementById('image');
       this.vim = this.image.getElementsByClassName('v-image__image--cover')
       console.log(this.vim)
-      this.vim[0].style['backgroundImage'] = 'url(' + this.cuslink + ')';
+      var len = this.vim[0].style['backgroundImage'].length
+      this.res = this.vim[0].style['backgroundImage'].substring(5, len-2)
+      console.log(this.res)
+      this.$store.state.imgSrc = this.res;
+      // this.vim[0].style['backgroundImage'] = this.res;
     },
     pickFile() {
       this.$refs.inputFile.click()
+      // console.log(this.res)
+      // this.$store.state.imgSrc = this.res
+      // console.log(this.$store.state.imgSrc);
     }
   },
   data (){
     return {
       image:null,
       vim:null,
-      cuslink:null
-      // res:null
+      res:null,
+      // imgSrc:"https://source.unsplash.com/1600x900/?newyork"
     }
   }
 }

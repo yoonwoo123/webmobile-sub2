@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ImgBanner imgSrc="https://source.unsplash.com/1600x900/?newyork">
+    <ImgBanner>
       <div style="line-height:1.2em;font-size:1.2em;" slot="text">Translate</div>
     </ImgBanner>
     <Translate></Translate>
