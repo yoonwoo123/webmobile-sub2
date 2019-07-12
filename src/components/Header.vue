@@ -19,6 +19,7 @@
 
       <v-btn flat router :to="{name:'portfolio'}" exact><strong>Portfolio</strong></v-btn>
       <v-btn flat router :to="{name:'post'}" exact><strong>Post</strong></v-btn>
+      <v-btn flat router :to="{name:'translate'}" exact><strong>Translate</strong></v-btn>
       <!-- <v-btn flat router :to="{name:'project'}" exact><strong>Project</strong></v-btn> -->
     </v-toolbar-items>
 
@@ -166,7 +167,8 @@ export default {
       items: [
         { title: 'Home', icon: 'fa-h-square', name: 'home'},
         { title: 'Portfolio', icon: 'fa-laptop', name: 'portfolio'},
-        { title: 'Post', icon: 'fa-clipboard', name: 'post' }
+        { title: 'Post', icon: 'fa-clipboard', name: 'post' },
+        { title: 'Translate', icon: 'fa-language', name: 'translate' }
         // { title: 'Project', icon: 'fa-git-square' ,name:'project'}
       ],
       dialog: false,

@@ -1,18 +1,14 @@
 <template>
   <div class="filebox">
-    <label for="ex-file">배너 변경하기</label>
-    <input id="ex-file" name="img" type="file"/>
-    <v-btn @click="randomimage">배너를 랜덤으로</v-btn>
-    <v-btn @click="customimage">배너를 커스텀으로</v-btn>
+    <input ref="inputFile" id="ex-file" name="img" type="file" style="display: none;"/>
+    <v-btn @click="randomimage">랜덤 이미지 배너</v-btn>
+    <v-btn @click="pickFile">배너 이미지 선택</v-btn>
   </div>
 </template>
 
 <script type="text/javascript">
 export default {
     name: 'ImgurBanner',
-    components:{
-
-    },
     mounted() {
     function uploadImageByImgur(file, callback) {
         var form = new FormData();
@@ -93,6 +89,9 @@ export default {
       this.vim = this.image.getElementsByClassName('v-image__image--cover')
       console.log(this.vim)
       this.vim[0].style['backgroundImage'] = 'url(' + this.cuslink + ')';
+    },
+    pickFile() {
+      this.$refs.inputFile.click()
     }
   },
   data (){

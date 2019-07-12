@@ -1,15 +1,23 @@
 <template>
   <div class="up">
-    <img id="image" src="http://dy.gnch.or.kr/img/no-image.jpg" />
-    <input name="img" type="file"/>
+    <img id="image" src="http://dy.gnch.or.kr/img/no-image.jpg" style="width: 200px; height: auto;"/>
+    <v-text-field label="Select Image" @click='pickFile' v-model='imageName' prepend-icon='attach_file'></v-text-field>
+    <input name="img" ref="inputFile" type="file" style="display: none"/>
   </div>
 </template>
 
 <script type="text/javascript">
 export default {
     name: 'Imgur',
-    components:{
-      // VFacebookLogin
+    data () {
+      return {
+        imageName: ''
+      }
+    },
+    methods: {
+      pickFile() {
+        this.$refs.inputFile.click()
+      }
     },
     mounted() {
     function uploadImageByImgur(file, callback) {
@@ -65,6 +73,7 @@ export default {
 
           }else{
           var image = document.getElementById('image');
+          this.imageName = file.name;
           console.log('업로드된 파일경로:'+result.data.link);
           image.src = result.data.link;
           }
