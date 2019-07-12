@@ -101,20 +101,21 @@
   <v-navigation-drawer v-model="drawer" fixed temporary right >
   <v-toolbar flat>
     <v-icon color='pink' size="30px" @click.stop="drawer = !drawer">fa-chevron-circle-right</v-icon>
-    <v-list>
+    <!-- <v-list>
       <v-list-tile>
         <v-list-tile-title class="title" style="height:auto;">
           <v-toolbar-title v-if="name!=null" @click="$router.push({name:'home'})"  class="profile-toolbar">
-              <div class="profile_icon profile-div">
-                <img v-if="img!=null" :src="img" class="profile-img"/>
-                <img v-if="img==null" src="/img/icons/apple-touch-icon.png" class="profile-img"/>
-                <span class="profile-name">{{name}}</span>
-              </div>
+
           </v-toolbar-title>
 
         </v-list-tile-title>
       </v-list-tile>
-    </v-list>
+    </v-list> -->
+    <div class="profile_icon profile-div">
+      <img v-if="img!=null" :src="img" class="profile-img"/>
+      <img v-if="img==null" src="/img/icons/apple-touch-icon.png" class="profile-img"/>
+      <span class="profile-name">{{name}}</span>
+    </div>
     <v-btn v-if="name == null" fab small>
       <v-icon size='25px' color="deep-orange" @click="dialog=true">fa-user-circle</v-icon>
     </v-btn>
