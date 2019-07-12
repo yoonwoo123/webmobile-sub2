@@ -8,11 +8,11 @@
     <v-toolbar-items class="hidden-sm-and-down">
       <!-- <v-btn flat @click="$router.push({name:'portfolio'})"><strong>Portfolio</strong></v-btn> -->
 
-      <v-toolbar-title v-if="name!=null" @click="$router.push({name:'home'})"  style="width:inherit; height:100%; display:flex">
-          <div class="profile_icon" style="align-items: center;display: flex; margin:auto">
-            <img v-if="img!=null" :src="img" style="margin:5px; float:left; width:35px; border-radius:50%"/>
-            <img v-if="img==null" src="/img/icons/apple-touch-icon.png" style="margin:5px; float:left; width:35px; border-radius:50%"/>
-            <span style="float:left; margin:5px; font-weight:bold; font-size:17px;">{{name}}</span>
+      <v-toolbar-title v-if="name!=null" @click="$router.push({name:'home'})"  class="profile-toolbar">
+          <div class="profile_icon profile-div">
+            <img v-if="img!=null" :src="img" class="profile-img"/>
+            <img v-if="img==null" src="/img/icons/apple-touch-icon.png" class="profile-img"/>
+            <span class="profile-name">{{name}}</span>
           </div>
       </v-toolbar-title>
       <v-btn flat v-if="name != null" @click="logout" exact><strong>Logout</strong></v-btn>
@@ -103,11 +103,21 @@
     <v-icon color='pink' size="30px" @click.stop="drawer = !drawer">fa-chevron-circle-right</v-icon>
     <v-list>
       <v-list-tile>
-        <v-list-tile-title class="title">
-          <strong>Menu</strong>
+        <v-list-tile-title class="title" style="height:auto;">
+          <v-toolbar-title v-if="name!=null" @click="$router.push({name:'home'})"  class="profile-toolbar">
+              <div class="profile_icon profile-div">
+                <img v-if="img!=null" :src="img" class="profile-img"/>
+                <img v-if="img==null" src="/img/icons/apple-touch-icon.png" class="profile-img"/>
+                <span class="profile-name">{{name}}</span>
+              </div>
+          </v-toolbar-title>
+
         </v-list-tile-title>
       </v-list-tile>
     </v-list>
+    <v-btn v-if="name == null" fab small>
+      <v-icon size='25px' color="deep-orange" @click="dialog=true">fa-user-circle</v-icon>
+    </v-btn>
     <v-btn fab small @click="alertBookmark"><v-icon size='25px' color="yellow darken-1">fa-star</v-icon></v-btn>
   </v-toolbar>
 
@@ -128,7 +138,17 @@
         <v-list-tile-title>{{ item.title }}</v-list-tile-title>
       </v-list-tile-content>
     </v-list-tile>
+
+    <v-list-tile flat v-if="name != null" @click="logout" router :to="'home'" exact>
+      <v-list-tile-action>
+        <v-icon>fa-user-circle</v-icon>
+      </v-list-tile-action>
+      <v-list-tile-content>
+        <v-list-tile-title>Logout</v-list-tile-title>
+      </v-list-tile-content>
+    </v-list-tile>
   </v-list>
+
   </v-navigation-drawer>
 
 </v-layout>
@@ -143,7 +163,6 @@ export default {
     return {
       drawer: null,
       items: [
-        { title: 'Login', icon: 'fa-user-circle', name: 'login'},
         { title: 'Home', icon: 'fa-h-square', name: 'home'},
         { title: 'Portfolio', icon: 'fa-laptop', name: 'portfolio'},
         { title: 'Post', icon: 'fa-clipboard', name: 'post' }
@@ -260,5 +279,27 @@ export default {
   cursor: pointer;
 
   background-color: rgba(0,0,0,0.12);
+}
+.profile-name{
+  float:left;
+  margin:5px;
+  font-weight:bold;
+  font-size:17px;
+}
+.profile-img {
+  margin:5px;
+  float:left;
+  width:35px;
+  border-radius:50%
+}
+.profile-div{
+  align-items: center;
+  display: flex;
+  margin:auto
+}
+.profile-toolbar{
+  width:inherit;
+  height:100%;
+  display:flex
 }
 </style>
