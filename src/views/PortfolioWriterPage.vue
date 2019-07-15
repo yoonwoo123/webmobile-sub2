@@ -3,9 +3,9 @@
       <v-layout>
       <v-flex>
         <h2 class="headline mb-3 font-weight-bold text-xs-center">Portfolio 작성</h2>
-        <v-text-field label="Title" regular></v-text-field>
+        <v-text-field label="Title" regular v-model="title"></v-text-field>
         <Imgur></Imgur>
-        <markdown-editor v-model="content" ref="markdownEditor"></markdown-editor>
+        <markdown-editor v-model="body" ref="markdownEditor"></markdown-editor>
         <v-btn color="blue-grey lighten-4" @click="post">등록하기</v-btn>
         <v-btn>취소</v-btn>
       </v-flex>
@@ -22,9 +22,15 @@ export default {
 	components: {
     Imgur
 	},
+  data () {
+    return {
+      title: '',
+      body: ''
+    }
+  },
   methods:{
     post:function(){
-      firebase.postPortfolio(this.title, this.body, "http://dy.gnch.or.kr/img/no-image.jpg")
+      FirebaseService.postPortfolio(this.title, this.body, "http://dy.gnch.or.kr/img/no-image.jpg")
     }
   },
   mounted () {
