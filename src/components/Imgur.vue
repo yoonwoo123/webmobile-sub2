@@ -74,6 +74,7 @@ export default {
           }else{
           var image = document.getElementById('image');
           this.imageName = file.name;
+          console.log(this.imageName);
           console.log('업로드된 파일경로:'+result.data.link);
           image.src = result.data.link;
           }

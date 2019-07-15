@@ -7,7 +7,7 @@
       <font-awesome-icon icon="tint" /> {{ humidity }}%
     </span>
     <v-spacer></v-spacer>
-    <a href="https://lab.ssafy.com/tlswhd1020/webmobile-sub2"><font-awesome-icon :icon="['fab', 'gitlab']" /></a> 
+    <a href="https://lab.ssafy.com/tlswhd1020/webmobile-sub2"><font-awesome-icon :icon="['fab', 'gitlab']" /></a>
     <v-spacer></v-spacer>
     <div>&copy;2019 — HyunGyu Yoon</div>
   </v-footer>
