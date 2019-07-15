@@ -19,7 +19,6 @@
 
       <v-btn flat router :to="{name:'portfolio'}" exact><strong>Portfolio</strong></v-btn>
       <v-btn flat router :to="{name:'post'}" exact><strong>Post</strong></v-btn>
-      <v-btn flat router :to="{name:'translate'}" exact><strong>Translate</strong></v-btn>
       <!-- <v-btn flat router :to="{name:'project'}" exact><strong>Project</strong></v-btn> -->
     </v-toolbar-items>
 
@@ -102,7 +101,6 @@
   <v-navigation-drawer v-model="drawer" fixed temporary right >
   <v-toolbar flat>
     <v-icon color='pink' size="30px" @click.stop="drawer = !drawer">fa-chevron-circle-right</v-icon>
-<<<<<<< HEAD
 
     <v-list-tile-title class="title" style="height:auto;">
       <v-toolbar-title v-if="name!=null" @click="$router.push({name:'home'})"  class="profile-toolbar">
@@ -114,23 +112,6 @@
       </v-toolbar-title>
 
     </v-list-tile-title>
-=======
-    <!-- <v-list>
-      <v-list-tile>
-        <v-list-tile-title class="title" style="height:auto;">
-          <v-toolbar-title v-if="name!=null" @click="$router.push({name:'home'})"  class="profile-toolbar">
-
-          </v-toolbar-title>
-
-        </v-list-tile-title>
-      </v-list-tile>
-    </v-list> -->
-    <div class="profile_icon profile-div">
-      <img v-if="img!=null" :src="img" class="profile-img"/>
-      <img v-if="img==null" src="/img/icons/apple-touch-icon.png" class="profile-img"/>
-      <span class="profile-name">{{name}}</span>
-    </div>
->>>>>>> ebfd9ebccad2d7af942726810e2642ea004773aa
     <v-btn v-if="name == null" fab small>
       <v-icon size='25px' color="deep-orange" @click="dialog=true">fa-user-circle</v-icon>
     </v-btn>
@@ -181,8 +162,7 @@ export default {
       items: [
         { title: 'Home', icon: 'fa-h-square', name: 'home'},
         { title: 'Portfolio', icon: 'fa-laptop', name: 'portfolio'},
-        { title: 'Post', icon: 'fa-clipboard', name: 'post' },
-        { title: 'Translate', icon: 'fa-language', name: 'translate' }
+        { title: 'Post', icon: 'fa-clipboard', name: 'post' }
         // { title: 'Project', icon: 'fa-git-square' ,name:'project'}
       ],
       dialog: false,
