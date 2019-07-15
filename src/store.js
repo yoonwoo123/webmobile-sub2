@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
 		accessToken: "",
-		user: ""
+		user: "",
+    imgSrc:"https://source.unsplash.com/1600x900/?newyork"
   }
 })

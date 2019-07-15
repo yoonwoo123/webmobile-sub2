@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <Header></Header> -->
-    <ImgBanner id="image" class="" imgSrc="https://source.unsplash.com/1600x900/?newyork">
+    <ImgBanner id="image" class="">
       <div style="line-height:1.2em;" slot="text" class="display-3 font-weight-black">
         <strong style="font-size:10vw">Stay hungry,<br> Stay foolish!</strong>
       </div>
@@ -79,6 +79,7 @@ export default {
 	},
   mounted () {
     FirebaseService.logging(this.$session.get("name"), this.$route['path'])
+    console.log(this.$store.state.imgSrc)
   }
 }
 </script>

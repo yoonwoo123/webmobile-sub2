@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ImgBanner id="image" imgSrc="https://source.unsplash.com/1600x900/?newyork">
+    <ImgBanner id="image">
       <div style="line-height:1.2em;font-size:1.2em;" slot="text">Post</div>
     </ImgBanner>
     <!-- <ImgurBanner></ImgurBanner> -->

@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <img id="ban" src="https://source.unsplash.com/1600x900/?newyork" /> -->
-    <v-img id="" :src="imgSrc"
+    <v-img id="ban" v-bind:src="this.$store.state.imgSrc"
            aspect-ratio="1.7" v-resize="resize"  v-bind:style="{height:newHeight}">
       <v-layout align-center justify-center row fill-height>
         <v-flex text-xs-center >
@@ -11,6 +11,7 @@
         </v-flex>
       </v-layout>
     </v-img>
+    <!-- <v-btn @click="customimage">선택 이미지 배너</v-btn> -->
     <!-- <input name="img" type="file"/> -->
   </div>
 </template>
@@ -20,7 +21,9 @@
 export default {
 	name: 'ImgBanner',
 	props: {
-		imgSrc: {type: String},
+		res: {type: String,
+             default: "https://source.unsplash.com/1600x900/?newyork"
+    },
 		text: {type: String}
 	},
   data () {
@@ -28,10 +31,30 @@ export default {
       newHeight: null
     }
   },
+  // mounted() {
+  //   console.log(this.$store.state.imgSrc);
+  //   var ban = document.getElementById('ban');
+  //   var vim = ban.getElementsByClassName('v-image__image--cover');
+  //   console.log(ban)
+  //   console.log(vim[0].style['backgroundImage']);
+  //   vim[0].style['backgroundImage'] = 'url(' + this.$store.state.imgSrc + ')';
+  // },
 	methods: {
     resize(){
       this.newHeight = window.innerWidth < 600 ? window.innerHeight-56 +'px' : null
-    }
+    },
+    // customimage() {
+    //   console.log(document.getElementById('ban'));
+    //   var ban = document.getElementById('ban');
+    //   // console.log('업로드된 파일경로:'+result.data.link);
+    //   // image.src = result.data.link;
+    //   var vim = ban.getElementsByClassName('v-image__image--cover');
+    //   //       // var vim = $(".vv").hide();
+    //   console.log(vim[0].style['backgroundImage']);
+    //   this.$store.state.imgSrc = vim[0].style['backgroundImage'];
+    //   vim[0].style['backgroundImage'] = 'url(' + this.$store.state.imgSrc + ')';
+    //   console.log(this.$store.state.imgSrc);
+    // }
 	},
   // mounted() {
   //   function uploadImageByImgur(file, callback) {
