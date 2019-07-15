@@ -9,7 +9,7 @@
     <v-spacer></v-spacer>
     <a href="https://lab.ssafy.com/tlswhd1020/webmobile-sub2"><font-awesome-icon :icon="['fab', 'gitlab']" /></a>
     <v-spacer></v-spacer>
-    <div>&copy;2019 — HyunGyu Yoon</div>
+    <div>&copy;2019 — HPHK</div>
   </v-footer>
 </template>
 
@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     getWeather: function () {
-      const weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q=Seoul&units=metric&lang=kr&appid=9605cf8a9a7b4126fb57deb954cac4d5'
+      const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=Seoul&units=metric&lang=kr&appid=9605cf8a9a7b4126fb57deb954cac4d5'
       axios.get(weatherUrl)
         .then(response => response.data)
           .then((data) => {
