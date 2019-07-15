@@ -3,7 +3,7 @@
   <v-toolbar fixed app>
     <!-- <v-toolbar-side-icon></v-toolbar-side-icon> -->
     <v-icon large color="blue-grey" @click="$router.push({name:'home'})">fa-h-square</v-icon>
-    <v-toolbar-title @click="$router.push({name:'home'})"><strong>윤현규의 블로그</strong></v-toolbar-title>
+    <v-toolbar-title @click="$router.push({name:'home'})"><strong>HPHK</strong></v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
       <!-- <v-btn flat @click="$router.push({name:'portfolio'})"><strong>Portfolio</strong></v-btn> -->

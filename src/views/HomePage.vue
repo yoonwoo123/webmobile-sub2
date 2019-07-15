@@ -13,8 +13,7 @@
       <v-layout my-5>
         <v-flex xs12 sm8 text-xs-center text-sm-left>
           <h2 class="headline mb-3 font-weight-bold t-auto">About Me</h2>
-          <p class="mr-4 c-auto">안녕하세요! 윤현규입니다.<br/>함께 프로젝트를 진행하게 되어서 기쁩니다. Vue는 어렵지만. 차근차근 하나씩 따라하다보면 어느새 멋진 블로그를
-            만들수 있지 않을까요? 화이팅하고 열심히 하도록 하겠습니다.</p>
+          <p class="mr-4 c-auto">안녕하세요! 해피해킹조입니다.<br/>좋은 팀원들을 만나 프로젝트를 재밌게 진행중입니다. 저희의 이번 프로젝트 결과물을 잘 봐주세요. 감사합니다.</p>
         </v-flex>
         <v-flex sm4 class="hidden-xs-only">
           <v-img style="border-radius:15%" :src="getImgUrl('profile.jpg')" aspect-ratio="1.0"/>
