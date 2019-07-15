@@ -1,26 +1,41 @@
 <template>
   <v-container>
       <v-layout>
-
       <v-flex>
-
         <h2 class="headline mb-3 font-weight-bold text-xs-center">Portfolio 작성</h2>
-        <v-text-field label="Title" regular></v-text-field>
-        <markdown-editor v-model="content" ref="markdownEditor"></markdown-editor>
-        <div class="text-xs-right">
-        <v-btn color="blue-grey lighten-4">등록하기</v-btn>
+        <v-text-field label="Title" regular v-model="title"></v-text-field>
+        <Imgur></Imgur>
+        <markdown-editor v-model="body" ref="markdownEditor"></markdown-editor>
+        <v-btn color="blue-grey lighten-4" @click="post">등록하기</v-btn>
         <v-btn>취소</v-btn>
-      </div>
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 
-<script>
+<script type="text/javascript">
+import FirebaseService from '@/services/FirebaseService'
+import Imgur from '../components/Imgur'
+
 export default {
 	name: 'PortfolioWriterPage',
 	components: {
-	}
+    Imgur
+	},
+  data () {
+    return {
+      title: '',
+      body: ''
+    }
+  },
+  methods:{
+    post:function(){
+      FirebaseService.postPortfolio(this.title, this.body, "http://dy.gnch.or.kr/img/no-image.jpg")
+    }
+  },
+  mounted () {
+    FirebaseService.logging(this.$session.get("name"), this.$route['path'])
+  }
 }
 
 </script>

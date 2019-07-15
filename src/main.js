@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+import VueSession from 'vue-session'
 import 'vuetify/dist/vuetify.min.css'
 import VueSimplemde from 'vue-simplemde'
 import 'simplemde/dist/simplemde.min.css'
@@ -10,7 +11,24 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 
+import axios from 'axios'
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faTemperatureHigh } from '@fortawesome/free-solid-svg-icons'
+import { faTint } from '@fortawesome/free-solid-svg-icons'
+import { faGitlab } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faUserSecret)
+library.add(faTemperatureHigh)
+library.add(faTint)
+library.add(faGitlab)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
+
+Vue.prototype.$http = axios
 
 Vue.use(Vuetify, {
 	iconfont: 'fa4',
@@ -23,6 +41,7 @@ Vue.use(Vuetify, {
 })
 
 Vue.use(VueSimplemde)
+Vue.use(VueSession)
 
 new Vue({
   router,

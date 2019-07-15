@@ -1,18 +1,19 @@
 <template>
   <div>
     <!-- <Header></Header> -->
-    <ImgBanner imgSrc="https://source.unsplash.com/1600x900/?newyork">
+    <ImgBanner id="image" class="">
       <div style="line-height:1.2em;" slot="text" class="display-3 font-weight-black">
         <strong style="font-size:10vw">Stay hungry,<br> Stay foolish!</strong>
       </div>
     </ImgBanner>
+    <ImgurBanner></ImgurBanner>
+
     <v-container>
       <!-- About Me -->
       <v-layout my-5>
         <v-flex xs12 sm8 text-xs-center text-sm-left>
           <h2 class="headline mb-3 font-weight-bold t-auto">About Me</h2>
-          <p class="mr-4 c-auto">안녕하세요! 윤현규입니다.<br/>함께 프로젝트를 진행하게 되어서 기쁩니다. Vue는 어렵지만. 차근차근 하나씩 따라하다보면 어느새 멋진 블로그를
-            만들수 있지 않을까요? 화이팅하고 열심히 하도록 하겠습니다.</p>
+          <p class="mr-4 c-auto">안녕하세요! 해피해킹조입니다.<br/>좋은 팀원들을 만나 프로젝트를 재밌게 진행중입니다. 저희의 이번 프로젝트 결과물을 잘 봐주세요. 감사합니다.</p>
         </v-flex>
         <v-flex sm4 class="hidden-xs-only">
           <v-img style="border-radius:15%" :src="getImgUrl('profile.jpg')" aspect-ratio="1.0"/>
@@ -49,13 +50,16 @@
   </div>
 </template>
 
-<script>
 
+
+<script>
+import FirebaseService from '@/services/FirebaseService'
 import ImgBanner from '../components/ImgBanner'
 import PortfolioList from '../components/PortfolioList'
 import PostList from '../components/PostList'
 import RepositoryList from '../components/RepositoryList'
-
+import Imgur from '../components/Imgur'
+import ImgurBanner from '../components/ImgurBanner'
 
 export default {
 	name: 'HomePage',
@@ -63,13 +67,19 @@ export default {
 		ImgBanner,
 		PortfolioList,
 		PostList,
-		RepositoryList
+		RepositoryList,
+    Imgur,
+    ImgurBanner
 	},
 	methods: {
 		getImgUrl(img) {
 			return require('../assets/' + img)
 		}
 	},
+  mounted () {
+    FirebaseService.logging(this.$session.get("name"), this.$route['path'])
+    console.log(this.$store.state.imgSrc)
+  }
 }
 </script>
 
@@ -97,5 +107,38 @@ export default {
   .t-auto{
     font-size: 32px!important;
   }
+}
+.filebox label {
+  display: inline-block;
+  padding: .5em .75em;
+  color: #fff;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #5cb85c;
+  cursor: pointer;
+  border: 1px solid #4cae4c;
+  border-radius: .25em;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.filebox label:hover {
+  background-color: #6ed36e;
+}
+
+.filebox label:active {
+  background-color: #367c36;
+}
+
+.filebox input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 </style>

@@ -3,7 +3,7 @@
     <v-layout>
 
       <v-flex xs12>
-        <h2 class="font-weight-regular limit-line">{{repos.path_with_namespace}}</h2>
+        <h2 class="font-weight-regular limit-line"><a v-bind:href="repos.http_url_to_repo">{{repos.path_with_namespace}}</a></h2>
         <p class="subheading mb-1 grey--text text--darken-1 font-weight-light">{{repos.namespace.name}}</p>
       </v-flex>
 
@@ -25,7 +25,7 @@ export default {
 		}
 	},
   mounted() {
-		this.drawStatGraph()
+		// this.drawStatGraph()
   },
 	methods: {
 		async drawStatGraph() {

@@ -1,0 +1,1833 @@
+{
+  "commits": [
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-12T11:41:34.000+09:00",
+      "id": "260befd00a91dd584dcc57e411c6e9defc268c3f",
+      "message": "S1P2212008-48 Change image upload UI\n",
+      "refs": "develop",
+      "space": 1,
+      "time": 0,
+      "parents": [
+        [
+          "48c196a722b81905b285b21459ba7c82013eb698",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "someth00@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/f653aa1ac0fcd2275c703c5b51812bcd?s=40&d=wavatar",
+        "name": "hyungyu"
+      },
+      "date": "2019-07-12T10:14:47.000+09:00",
+      "id": "48c196a722b81905b285b21459ba7c82013eb698",
+      "message": "modify mobile login layout\n",
+      "refs": "develop",
+      "space": 1,
+      "time": 1,
+      "parents": [
+        [
+          "cf4ea855bbf6bf1bf3a33b4f4cb2441cc0cc2d28",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-12T09:44:06.000+09:00",
+      "id": "cf4ea855bbf6bf1bf3a33b4f4cb2441cc0cc2d28",
+      "message": "S1P2212008-24 모바일 레이아웃\n",
+      "refs": "",
+      "space": 1,
+      "time": 2,
+      "parents": [
+        [
+          "9300f5ce7d0b12222869b719c11f380fb024a99e",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-11T18:27:03.000+09:00",
+      "id": "9300f5ce7d0b12222869b719c11f380fb024a99e",
+      "message": "S1P2212008-49 Change name\n",
+      "refs": "",
+      "space": 1,
+      "time": 3,
+      "parents": [
+        [
+          "4461c2d30361e9bf70146c68fba2c311d7661bd4",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-11T18:25:22.000+09:00",
+      "id": "4461c2d30361e9bf70146c68fba2c311d7661bd4",
+      "message": "S1P2212008-49 Complete Logging\n",
+      "refs": "",
+      "space": 1,
+      "time": 4,
+      "parents": [
+        [
+          "5cb13995818213856b262014bf7bb551a4e480d2",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-11T18:24:38.000+09:00",
+      "id": "5cb13995818213856b262014bf7bb551a4e480d2",
+      "message": "S1P2212008-49 Complete Logging\n",
+      "refs": "",
+      "space": 1,
+      "time": 5,
+      "parents": [
+        [
+          "14584cc5a8559aad399276462254ed8ac4175294",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "lkkjasd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/939982f93f54f872b629a76ad5f19eba?s=40&d=wavatar",
+        "name": "YonungWoo"
+      },
+      "date": "2019-07-11T17:55:46.000+09:00",
+      "id": "14584cc5a8559aad399276462254ed8ac4175294",
+      "message": "S1P2212008-52 이미지 배너 랜덤, 커스텀 선택기능 완료\n",
+      "refs": "",
+      "space": 1,
+      "time": 6,
+      "parents": [
+        [
+          "75836b37866219fa4ea4e6ed86a97fd36a760e6f",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-11T17:54:20.000+09:00",
+      "id": "75836b37866219fa4ea4e6ed86a97fd36a760e6f",
+      "message": "S1P2212008-24 로그인 default 사진 구성\n",
+      "refs": "",
+      "space": 1,
+      "time": 7,
+      "parents": [
+        [
+          "1db7050621a8fc04f073aa4c40b25f920fdbe792",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-11T17:14:19.000+09:00",
+      "id": "1db7050621a8fc04f073aa4c40b25f920fdbe792",
+      "message": "Merge branch 'develop' of https://lab.ssafy.com/tlswhd1020/webmobile-sub2 into develop\n",
+      "refs": "",
+      "space": 1,
+      "time": 8,
+      "parents": [
+        [
+          "01fd1e2d7272422b281f2d10d9d0952288ff1336",
+          1
+        ],
+        [
+          "bf4167c8a08360dfd96a13d36d118ed104e92ca8",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-11T17:14:09.000+09:00",
+      "id": "01fd1e2d7272422b281f2d10d9d0952288ff1336",
+      "message": "S1P2212008-24 회원가입 및 로그인 Header 구현\n",
+      "refs": "",
+      "space": 1,
+      "time": 9,
+      "parents": [
+        [
+          "d8203c1300791b8b888aa333bdefe58b23fea254",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "someth00@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/f653aa1ac0fcd2275c703c5b51812bcd?s=40&d=wavatar",
+        "name": "hyungyu"
+      },
+      "date": "2019-07-11T16:39:40.000+09:00",
+      "id": "bf4167c8a08360dfd96a13d36d118ed104e92ca8",
+      "message": "fix repository warning\n",
+      "refs": "",
+      "space": 3,
+      "time": 10,
+      "parents": [
+        [
+          "02d8fa2adf935d9f556b29a28964a347f5a23eef",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-11T16:23:38.000+09:00",
+      "id": "02d8fa2adf935d9f556b29a28964a347f5a23eef",
+      "message": "Merge branch 'develop' of https://lab.ssafy.com/tlswhd1020/webmobile-sub2 into develop\n",
+      "refs": "",
+      "space": 3,
+      "time": 11,
+      "parents": [
+        [
+          "8529ffa29ebdf7613888b03622dd0d955d0dfb6e",
+          3
+        ],
+        [
+          "308bf5f38228e14830ed62ab8648a3dffe1435e1",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-11T16:23:32.000+09:00",
+      "id": "8529ffa29ebdf7613888b03622dd0d955d0dfb6e",
+      "message": "S1P2212008-49 Insert database(path, time)\n",
+      "refs": "",
+      "space": 3,
+      "time": 12,
+      "parents": [
+        [
+          "d0d2a8a2fa7b71114e2e4de97c458142b2d36a21",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "someth00@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/f653aa1ac0fcd2275c703c5b51812bcd?s=40&d=wavatar",
+        "name": "hyungyu"
+      },
+      "date": "2019-07-11T15:12:25.000+09:00",
+      "id": "308bf5f38228e14830ed62ab8648a3dffe1435e1",
+      "message": "modify graph size\n",
+      "refs": "",
+      "space": 5,
+      "time": 13,
+      "parents": [
+        [
+          "d8203c1300791b8b888aa333bdefe58b23fea254",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-11T15:10:42.000+09:00",
+      "id": "d8203c1300791b8b888aa333bdefe58b23fea254",
+      "message": "S1P2212008-24 front layout 작업2\n",
+      "refs": "",
+      "space": 1,
+      "time": 14,
+      "parents": [
+        [
+          "9212a7f274e5f1f9df04a921721eba92a5766c35",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-11T12:10:18.000+09:00",
+      "id": "9212a7f274e5f1f9df04a921721eba92a5766c35",
+      "message": "S1P2212008-24 front layout 작업\n",
+      "refs": "",
+      "space": 1,
+      "time": 15,
+      "parents": [
+        [
+          "a43244ac1d435f2e3c539d11553b94600df69471",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "lkkjasd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/939982f93f54f872b629a76ad5f19eba?s=40&d=wavatar",
+        "name": "YonungWoo"
+      },
+      "date": "2019-07-11T12:09:09.000+09:00",
+      "id": "a43244ac1d435f2e3c539d11553b94600df69471",
+      "message": "업로드 수정S1P2212008-51\n",
+      "refs": "",
+      "space": 1,
+      "time": 16,
+      "parents": [
+        [
+          "99a720ed99c8b354836a082b7a3701924064a3c0",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "someth00@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/f653aa1ac0fcd2275c703c5b51812bcd?s=40&d=wavatar",
+        "name": "hyungyu"
+      },
+      "date": "2019-07-11T12:08:35.000+09:00",
+      "id": "99a720ed99c8b354836a082b7a3701924064a3c0",
+      "message": "S1P2212008-23 update commit history, add repository link\n",
+      "refs": "",
+      "space": 1,
+      "time": 17,
+      "parents": [
+        [
+          "1e02b94ecd728368992fb3d9a28a843014b93a56",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "lkkjasd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/939982f93f54f872b629a76ad5f19eba?s=40&d=wavatar",
+        "name": "YonungWoo"
+      },
+      "date": "2019-07-11T11:56:06.000+09:00",
+      "id": "1e02b94ecd728368992fb3d9a28a843014b93a56",
+      "message": "S1P2212008-51, S1P2212008-52 이미지 업로드 컴포넌트 구현\n",
+      "refs": "",
+      "space": 1,
+      "time": 18,
+      "parents": [
+        [
+          "ff48d8324a3f4dc425429f9db6ff9f719f238cb7",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "areygim@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/eec9ef9dfe660bf422c055a8630e6d52?s=40&d=wavatar",
+        "name": "areygim"
+      },
+      "date": "2019-07-11T11:25:25.000+09:00",
+      "id": "ff48d8324a3f4dc425429f9db6ff9f719f238cb7",
+      "message": "S1P2212008-48 added gitlab link in footer\n",
+      "refs": "",
+      "space": 1,
+      "time": 19,
+      "parents": [
+        [
+          "8c18fc9c64f7322e01dac5b43bb7dd3d26c9c280",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "areygim@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/eec9ef9dfe660bf422c055a8630e6d52?s=40&d=wavatar",
+        "name": "areygim"
+      },
+      "date": "2019-07-11T10:50:33.000+09:00",
+      "id": "8c18fc9c64f7322e01dac5b43bb7dd3d26c9c280",
+      "message": "S1P2212008-19 added weather icon\n",
+      "refs": "",
+      "space": 1,
+      "time": 20,
+      "parents": [
+        [
+          "c4eea60779fb50cb804ff860d501379a13d9eb30",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "someth00@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/f653aa1ac0fcd2275c703c5b51812bcd?s=40&d=wavatar",
+        "name": "hyungyu"
+      },
+      "date": "2019-07-11T10:08:53.000+09:00",
+      "id": "c4eea60779fb50cb804ff860d501379a13d9eb30",
+      "message": "modify graph height\n",
+      "refs": "",
+      "space": 1,
+      "time": 21,
+      "parents": [
+        [
+          "c8cb57ec1c9dfed2920c2dc7f89b8ff42ba09473",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "someth00@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/f653aa1ac0fcd2275c703c5b51812bcd?s=40&d=wavatar",
+        "name": "hyungyu"
+      },
+      "date": "2019-07-11T09:39:23.000+09:00",
+      "id": "c8cb57ec1c9dfed2920c2dc7f89b8ff42ba09473",
+      "message": "S1P2212008-22 hide gitlab graph mobile size, fix error\n",
+      "refs": "",
+      "space": 1,
+      "time": 22,
+      "parents": [
+        [
+          "d0d2a8a2fa7b71114e2e4de97c458142b2d36a21",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-10T18:22:40.000+09:00",
+      "id": "d0d2a8a2fa7b71114e2e4de97c458142b2d36a21",
+      "message": "S1P2212008-24 Install Google cloud functions\n",
+      "refs": "",
+      "space": 1,
+      "time": 23,
+      "parents": [
+        [
+          "992a721f0b77a8ae2f69369612203523883faae3",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-10T18:08:39.000+09:00",
+      "id": "992a721f0b77a8ae2f69369612203523883faae3",
+      "message": "S1P2212008-24 회원가입 및 로그인 api 기능 구현\n",
+      "refs": "",
+      "space": 1,
+      "time": 24,
+      "parents": [
+        [
+          "73468ed738cabbad28a680bae70274e8946c60e6",
+          1
+        ],
+        [
+          "ea986c6bbb2375b630ec777037aa63a62db62198",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-10T18:07:26.000+09:00",
+      "id": "73468ed738cabbad28a680bae70274e8946c60e6",
+      "message": "S1P2212008-24 회원가입 및 로그인 api 기능 구현\n",
+      "refs": "",
+      "space": 1,
+      "time": 25,
+      "parents": [
+        [
+          "fed87f1c01ae011ae91455ab21136c963a1b0eaa",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-10T17:57:10.000+09:00",
+      "id": "fed87f1c01ae011ae91455ab21136c963a1b0eaa",
+      "message": "S1P2212008-24 회원가입 및 로그인 api 기능 구현\n",
+      "refs": "",
+      "space": 1,
+      "time": 26,
+      "parents": [
+        [
+          "3588a10626876f77d8560d72e41d6b3ce7e6addc",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "lkkjasd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/939982f93f54f872b629a76ad5f19eba?s=40&d=wavatar",
+        "name": "YonungWoo"
+      },
+      "date": "2019-07-10T17:49:22.000+09:00",
+      "id": "ea986c6bbb2375b630ec777037aa63a62db62198",
+      "message": "translatepage 복원\n",
+      "refs": "",
+      "space": 3,
+      "time": 27,
+      "parents": [
+        [
+          "97ff3a027ae45f404ba619c7742e50229decd07e",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "lkkjasd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/939982f93f54f872b629a76ad5f19eba?s=40&d=wavatar",
+        "name": "YonungWoo"
+      },
+      "date": "2019-07-10T17:45:43.000+09:00",
+      "id": "97ff3a027ae45f404ba619c7742e50229decd07e",
+      "message": "Merge branch 'develop' of https://lab.ssafy.com/tlswhd1020/webmobile-sub2 into develop\n",
+      "refs": "",
+      "space": 3,
+      "time": 28,
+      "parents": [
+        [
+          "dcf919aa6c49669877f9e8b556501ac81aff9625",
+          3
+        ],
+        [
+          "f5b995f33aaf2c185d8a033c07b0dda7fd4b398d",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "lkkjasd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/939982f93f54f872b629a76ad5f19eba?s=40&d=wavatar",
+        "name": "YonungWoo"
+      },
+      "date": "2019-07-10T17:45:30.000+09:00",
+      "id": "dcf919aa6c49669877f9e8b556501ac81aff9625",
+      "message": "S1P2212008-26, S1P2212008-50 사진첨부 기능 구현\n",
+      "refs": "",
+      "space": 3,
+      "time": 29,
+      "parents": [
+        [
+          "988d6b0e583680482bf56f9e5fe188d345b70eab",
+          3
+        ],
+        [
+          "ec65483a4ab127ee7c49e7a6925bbf030e28e6a1",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "someth00@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/f653aa1ac0fcd2275c703c5b51812bcd?s=40&d=wavatar",
+        "name": "hyungyu"
+      },
+      "date": "2019-07-10T17:44:42.000+09:00",
+      "id": "f5b995f33aaf2c185d8a033c07b0dda7fd4b398d",
+      "message": "S1P2212008-21 fix error\n",
+      "refs": "",
+      "space": 5,
+      "time": 30,
+      "parents": [
+        [
+          "ec65483a4ab127ee7c49e7a6925bbf030e28e6a1",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "lkkjasd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/939982f93f54f872b629a76ad5f19eba?s=40&d=wavatar",
+        "name": "YonungWoo"
+      },
+      "date": "2019-07-10T17:41:45.000+09:00",
+      "id": "988d6b0e583680482bf56f9e5fe188d345b70eab",
+      "message": "S1P2212008-26, S1P2212008-50 사진첨부 기능 구현\n",
+      "refs": "",
+      "space": 3,
+      "time": 31,
+      "parents": [
+        [
+          "b0c088823df6bcd6e5b7c175b2b5b8d5386175a6",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "areygim@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/eec9ef9dfe660bf422c055a8630e6d52?s=40&d=wavatar",
+        "name": "areygim"
+      },
+      "date": "2019-07-10T15:18:52.000+09:00",
+      "id": "ec65483a4ab127ee7c49e7a6925bbf030e28e6a1",
+      "message": "S1P2212008-44 remove google analytics\n",
+      "refs": "",
+      "space": 1,
+      "time": 32,
+      "parents": [
+        [
+          "3588a10626876f77d8560d72e41d6b3ce7e6addc",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "areygim@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/eec9ef9dfe660bf422c055a8630e6d52?s=40&d=wavatar",
+        "name": "areygim"
+      },
+      "date": "2019-07-10T14:07:06.000+09:00",
+      "id": "3588a10626876f77d8560d72e41d6b3ce7e6addc",
+      "message": "S1P2212008-44 test\n",
+      "refs": "",
+      "space": 1,
+      "time": 33,
+      "parents": [
+        [
+          "aa81911d01901b6b1d6b9b8611bc5db9fc806ae6",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-10T10:47:19.000+09:00",
+      "id": "aa81911d01901b6b1d6b9b8611bc5db9fc806ae6",
+      "message": "S1P2212008-29 Delete old version\n",
+      "refs": "",
+      "space": 1,
+      "time": 34,
+      "parents": [
+        [
+          "0f21f90fce73bdee925eaff6131cca1add818eda",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-10T10:44:14.000+09:00",
+      "id": "0f21f90fce73bdee925eaff6131cca1add818eda",
+      "message": "S1P2212008-29 Make button and done\n",
+      "refs": "",
+      "space": 1,
+      "time": 35,
+      "parents": [
+        [
+          "3e0d87304cae7b82caffb16a56e782a15b42afee",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "areygim@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/eec9ef9dfe660bf422c055a8630e6d52?s=40&d=wavatar",
+        "name": "areygim"
+      },
+      "date": "2019-07-10T09:58:24.000+09:00",
+      "id": "3e0d87304cae7b82caffb16a56e782a15b42afee",
+      "message": "S1P2212008-44 edited firebase setting\n",
+      "refs": "",
+      "space": 1,
+      "time": 36,
+      "parents": [
+        [
+          "225164685540a88d6d7c45a9eef5a9984c9c6638",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-10T09:48:16.000+09:00",
+      "id": "225164685540a88d6d7c45a9eef5a9984c9c6638",
+      "message": "Merge branch 'develop' of https://lab.ssafy.com/tlswhd1020/webmobile-sub2 into develop\n",
+      "refs": "",
+      "space": 1,
+      "time": 37,
+      "parents": [
+        [
+          "9b2b2bb4130e74de9ab3ec42329a777dec1472de",
+          1
+        ],
+        [
+          "56ded1dc3b46c3f56cbc896d368181cdf642b41b",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-10T09:47:49.000+09:00",
+      "id": "9b2b2bb4130e74de9ab3ec42329a777dec1472de",
+      "message": "S1P2212008-28 DONE\n",
+      "refs": "",
+      "space": 1,
+      "time": 38,
+      "parents": [
+        [
+          "0c8009ec768b2f0a46a6b98a13373cb8aa882a74",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "areygim@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/eec9ef9dfe660bf422c055a8630e6d52?s=40&d=wavatar",
+        "name": "areygim"
+      },
+      "date": "2019-07-10T09:28:06.000+09:00",
+      "id": "56ded1dc3b46c3f56cbc896d368181cdf642b41b",
+      "message": "S1P2212008-44 added index\n",
+      "refs": "",
+      "space": 3,
+      "time": 39,
+      "parents": [
+        [
+          "0c8009ec768b2f0a46a6b98a13373cb8aa882a74",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "gogumassafy"
+      },
+      "date": "2019-07-09T23:26:10.000+09:00",
+      "id": "0c8009ec768b2f0a46a6b98a13373cb8aa882a74",
+      "message": "S1P2212008-28 Complete translator\n",
+      "refs": "",
+      "space": 1,
+      "time": 40,
+      "parents": [
+        [
+          "8377ca3bdb2390bca7b631240ecfa978dfa0212e",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "areygim@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/eec9ef9dfe660bf422c055a8630e6d52?s=40&d=wavatar",
+        "name": "areygim"
+      },
+      "date": "2019-07-09T17:49:46.000+09:00",
+      "id": "8377ca3bdb2390bca7b631240ecfa978dfa0212e",
+      "message": "Merge branch 'develop' of https://lab.ssafy.com/tlswhd1020/webmobile-sub2 into develop\n",
+      "refs": "",
+      "space": 1,
+      "time": 41,
+      "parents": [
+        [
+          "e3092d4ad002f2e3abb0bb8a366324fe55a2ed67",
+          1
+        ],
+        [
+          "820f894353f81c071c4957345bc40be6d3331130",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "areygim@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/eec9ef9dfe660bf422c055a8630e6d52?s=40&d=wavatar",
+        "name": "areygim"
+      },
+      "date": "2019-07-09T17:49:42.000+09:00",
+      "id": "e3092d4ad002f2e3abb0bb8a366324fe55a2ed67",
+      "message": "S1P2212008-44 index2\n",
+      "refs": "",
+      "space": 1,
+      "time": 42,
+      "parents": [
+        [
+          "53fd89f9098d87093b18d4e96ba78044ae92b855",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-09T17:46:32.000+09:00",
+      "id": "820f894353f81c071c4957345bc40be6d3331130",
+      "message": "Merge branch 'develop' of https://lab.ssafy.com/tlswhd1020/webmobile-sub2 into develop\n",
+      "refs": "",
+      "space": 3,
+      "time": 43,
+      "parents": [
+        [
+          "c77be12d8680997d278aed79bada5c7754c08513",
+          3
+        ],
+        [
+          "b0c088823df6bcd6e5b7c175b2b5b8d5386175a6",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-09T17:46:05.000+09:00",
+      "id": "c77be12d8680997d278aed79bada5c7754c08513",
+      "message": "S1P2212008-31 로그인 진행중\n",
+      "refs": "",
+      "space": 3,
+      "time": 44,
+      "parents": [
+        [
+          "0e8e5c3aa3177884015a138f66be7d3d2c7698b4",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "someth00@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/f653aa1ac0fcd2275c703c5b51812bcd?s=40&d=wavatar",
+        "name": "hyungyu"
+      },
+      "date": "2019-07-09T17:43:37.000+09:00",
+      "id": "b0c088823df6bcd6e5b7c175b2b5b8d5386175a6",
+      "message": "S1P2212008-21 add gitlab repository graph\n",
+      "refs": "",
+      "space": 3,
+      "time": 45,
+      "parents": [
+        [
+          "b585baf5416d3ce4a941689252651607a7ea89b3",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-09T17:42:08.000+09:00",
+      "id": "0e8e5c3aa3177884015a138f66be7d3d2c7698b4",
+      "message": "Merge branch 'develop' of https://lab.ssafy.com/tlswhd1020/webmobile-sub2 into develop\n",
+      "refs": "",
+      "space": 3,
+      "time": 46,
+      "parents": [
+        [
+          "c29f407026b65023e70089ffbf622d5450375ebf",
+          3
+        ],
+        [
+          "b585baf5416d3ce4a941689252651607a7ea89b3",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "lkkjasd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/939982f93f54f872b629a76ad5f19eba?s=40&d=wavatar",
+        "name": "YonungWoo"
+      },
+      "date": "2019-07-09T17:37:19.000+09:00",
+      "id": "b585baf5416d3ce4a941689252651607a7ea89b3",
+      "message": "S1P2212008-26 사진 첨부 기능 구현\n",
+      "refs": "",
+      "space": 3,
+      "time": 47,
+      "parents": [
+        [
+          "53fd89f9098d87093b18d4e96ba78044ae92b855",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-09T17:37:02.000+09:00",
+      "id": "c29f407026b65023e70089ffbf622d5450375ebf",
+      "message": "'gitignore'\n",
+      "refs": "",
+      "space": 3,
+      "time": 48,
+      "parents": [
+        [
+          "a4cab677275d56d54268e1c772302f987e00ee5c",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-09T17:26:20.000+09:00",
+      "id": "53fd89f9098d87093b18d4e96ba78044ae92b855",
+      "message": "S1P2212008-28 Import node js, trnaslate\n",
+      "refs": "",
+      "space": 1,
+      "time": 49,
+      "parents": [
+        [
+          "a4cab677275d56d54268e1c772302f987e00ee5c",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "lkkjasd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/939982f93f54f872b629a76ad5f19eba?s=40&d=wavatar",
+        "name": "YonungWoo"
+      },
+      "date": "2019-07-09T11:54:32.000+09:00",
+      "id": "a4cab677275d56d54268e1c772302f987e00ee5c",
+      "message": "S1P2212008-26 이미지 첨부확인, 썸네일 작성중\n",
+      "refs": "",
+      "space": 1,
+      "time": 50,
+      "parents": [
+        [
+          "15ad1a3e91ba3d77c2514e5954bbc6803f8b1bab",
+          1
+        ],
+        [
+          "ae721b1690e224327c9836307cc029adcfa165ce",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-09T11:47:48.000+09:00",
+      "id": "ae721b1690e224327c9836307cc029adcfa165ce",
+      "message": "S1P2212008-28 Insatll package\n",
+      "refs": "",
+      "space": 3,
+      "time": 51,
+      "parents": [
+        [
+          "cc47dd52f210eebfa789edbe313d878bb469bf12",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "lkkjasd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/939982f93f54f872b629a76ad5f19eba?s=40&d=wavatar",
+        "name": "YonungWoo"
+      },
+      "date": "2019-07-09T11:39:58.000+09:00",
+      "id": "15ad1a3e91ba3d77c2514e5954bbc6803f8b1bab",
+      "message": "S1P2212008-26 이미지 첨부확인, 썸네일 작성중\n",
+      "refs": "",
+      "space": 1,
+      "time": 52,
+      "parents": [
+        [
+          "fdfc6e7d65fd51f34ad201f8ffba773ebe0189a5",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "areygim@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/eec9ef9dfe660bf422c055a8630e6d52?s=40&d=wavatar",
+        "name": "areygim"
+      },
+      "date": "2019-07-09T11:34:41.000+09:00",
+      "id": "cc47dd52f210eebfa789edbe313d878bb469bf12",
+      "message": "S1P2212008-19 added weather api\n",
+      "refs": "",
+      "space": 3,
+      "time": 53,
+      "parents": [
+        [
+          "d6787df3178e93a014a8be5336f01c9088cef7fc",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-09T09:38:40.000+09:00",
+      "id": "d6787df3178e93a014a8be5336f01c9088cef7fc",
+      "message": "S1P2212008-40 Firebase deploy\n",
+      "refs": "",
+      "space": 3,
+      "time": 54,
+      "parents": [
+        [
+          "f469948a82eeeabca398a9a36d19355a2b3895e0",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-09T08:27:43.000+09:00",
+      "id": "f469948a82eeeabca398a9a36d19355a2b3895e0",
+      "message": "S1P2212008-34 Add gitignore\n",
+      "refs": "",
+      "space": 3,
+      "time": 55,
+      "parents": [
+        [
+          "40e66d9c11ce992c0cce967ed6896bb9ba66fcf1",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-08T19:32:27.000+09:00",
+      "id": "40e66d9c11ce992c0cce967ed6896bb9ba66fcf1",
+      "message": "S1P2212008-28 Install package\n",
+      "refs": "",
+      "space": 3,
+      "time": 56,
+      "parents": [
+        [
+          "232b40bc966fac30fd9ac8a0a1d12e0ead111f1d",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "areygim@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/eec9ef9dfe660bf422c055a8630e6d52?s=40&d=wavatar",
+        "name": "areygim"
+      },
+      "date": "2019-07-08T18:02:48.000+09:00",
+      "id": "232b40bc966fac30fd9ac8a0a1d12e0ead111f1d",
+      "message": "S1P2212008-19 edited footer\n",
+      "refs": "",
+      "space": 3,
+      "time": 57,
+      "parents": [
+        [
+          "5cca263d0ccbf445e37d53d63fcdd974c45c7f68",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-08T17:59:38.000+09:00",
+      "id": "5cca263d0ccbf445e37d53d63fcdd974c45c7f68",
+      "message": "S1P2212008-28 Install Google translation package\n",
+      "refs": "",
+      "space": 3,
+      "time": 58,
+      "parents": [
+        [
+          "fdfc6e7d65fd51f34ad201f8ffba773ebe0189a5",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "lkkjasd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/939982f93f54f872b629a76ad5f19eba?s=40&d=wavatar",
+        "name": "YonungWoo"
+      },
+      "date": "2019-07-08T17:55:11.000+09:00",
+      "id": "fdfc6e7d65fd51f34ad201f8ffba773ebe0189a5",
+      "message": "Merge branch 'develop' of https://lab.ssafy.com/tlswhd1020/webmobile-sub2 into develop\n",
+      "refs": "",
+      "space": 1,
+      "time": 59,
+      "parents": [
+        [
+          "a210d1c967f12932265f1c6e31055bbcbd9de608",
+          1
+        ],
+        [
+          "c61ea163e8e3d1fafb0a1cc51df1ff218ff5576c",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "lkkjasd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/939982f93f54f872b629a76ad5f19eba?s=40&d=wavatar",
+        "name": "YonungWoo"
+      },
+      "date": "2019-07-08T17:54:38.000+09:00",
+      "id": "a210d1c967f12932265f1c6e31055bbcbd9de608",
+      "message": "Merge branch 'develop' of https://lab.ssafy.com/tlswhd1020/webmobile-sub2 into develop\n",
+      "refs": "",
+      "space": 1,
+      "time": 60,
+      "parents": [
+        [
+          "e7e859ff7b92cd9e151e657177b7fdf2f98f1f61",
+          1
+        ],
+        [
+          "c7a61dae6a708019c1b5c69ccf24bb1533c3cc5e",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "someth00@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/f653aa1ac0fcd2275c703c5b51812bcd?s=40&d=wavatar",
+        "name": "hyungyu"
+      },
+      "date": "2019-07-08T17:51:06.000+09:00",
+      "id": "c61ea163e8e3d1fafb0a1cc51df1ff218ff5576c",
+      "message": "S1P2212008-2 gitlab repo test\n",
+      "refs": "",
+      "space": 3,
+      "time": 61,
+      "parents": [
+        [
+          "c7a61dae6a708019c1b5c69ccf24bb1533c3cc5e",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "lkkjasd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/939982f93f54f872b629a76ad5f19eba?s=40&d=wavatar",
+        "name": "YonungWoo"
+      },
+      "date": "2019-07-08T17:38:15.000+09:00",
+      "id": "e7e859ff7b92cd9e151e657177b7fdf2f98f1f61",
+      "message": "S1P2212008-26 사진첨부기능 구현 작업중\n",
+      "refs": "",
+      "space": 1,
+      "time": 62,
+      "parents": [
+        [
+          "3e44c7bee9a1a78bd916a85bcf0d44b9671433b2",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-08T17:20:55.000+09:00",
+      "id": "c7a61dae6a708019c1b5c69ccf24bb1533c3cc5e",
+      "message": "S1P2212008-27 S1P2212008-30 Modal Function for login and register page\n",
+      "refs": "",
+      "space": 1,
+      "time": 63,
+      "parents": [
+        [
+          "7a47ae706edd669471f0f70649e5332a59e57f84",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-08T11:57:54.000+09:00",
+      "id": "7a47ae706edd669471f0f70649e5332a59e57f84",
+      "message": "S1P2212008-10 done #resolve\n",
+      "refs": "",
+      "space": 1,
+      "time": 64,
+      "parents": [
+        [
+          "db5d4e2c74595d4eead89d6b51f2a403669e1d55",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-08T11:55:08.000+09:00",
+      "id": "db5d4e2c74595d4eead89d6b51f2a403669e1d55",
+      "message": "S1P2212008-10 test done #close\n",
+      "refs": "",
+      "space": 1,
+      "time": 65,
+      "parents": [
+        [
+          "311854be3661a39bb14973bb6dc087e446e046e8",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-08T11:53:54.000+09:00",
+      "id": "311854be3661a39bb14973bb6dc087e446e046e8",
+      "message": "S1P2212008-3 LoginPage(facebook function add)\n",
+      "refs": "",
+      "space": 1,
+      "time": 66,
+      "parents": [
+        [
+          "198b08560d5975b6f3659cd896cad8b2169a1e1e",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-08T11:49:53.000+09:00",
+      "id": "198b08560d5975b6f3659cd896cad8b2169a1e1e",
+      "message": "S1P2212008-10 #close\n",
+      "refs": "",
+      "space": 1,
+      "time": 67,
+      "parents": [
+        [
+          "3bde114f23f62e8c0a77d7b6c5318f7a651bd5cb",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "someth00@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/f653aa1ac0fcd2275c703c5b51812bcd?s=40&d=wavatar",
+        "name": "hyungyu"
+      },
+      "date": "2019-07-08T11:30:05.000+09:00",
+      "id": "3bde114f23f62e8c0a77d7b6c5318f7a651bd5cb",
+      "message": "remove tt.txt\n",
+      "refs": "",
+      "space": 1,
+      "time": 68,
+      "parents": [
+        [
+          "95cad953f83e140c949231453213334a44e0f1f6",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "qkrtlswhd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/2b10e20d10242bfe18f257ba8db913c4?s=40&d=wavatar",
+        "name": "tlswhd1020"
+      },
+      "date": "2019-07-08T11:18:37.000+09:00",
+      "id": "95cad953f83e140c949231453213334a44e0f1f6",
+      "message": "LoginPage Update to facebook function\n",
+      "refs": "",
+      "space": 1,
+      "time": 69,
+      "parents": [
+        [
+          "aaf871a6da64b6a164fd7c695a812f6be077014a",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "someth00@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/f653aa1ac0fcd2275c703c5b51812bcd?s=40&d=wavatar",
+        "name": "hyungyu"
+      },
+      "date": "2019-07-08T11:15:35.000+09:00",
+      "id": "aaf871a6da64b6a164fd7c695a812f6be077014a",
+      "message": "Merge branch 'develop' of https://lab.ssafy.com/tlswhd1020/webmobile-sub2 into develop\n",
+      "refs": "",
+      "space": 1,
+      "time": 70,
+      "parents": [
+        [
+          "ec44ec9aeda4e0effa5737f968fdafe35621b5c4",
+          1
+        ],
+        [
+          "77a99a45ad09ff552e76e7030fbe2a80ba589a27",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "someth00@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/f653aa1ac0fcd2275c703c5b51812bcd?s=40&d=wavatar",
+        "name": "hyungyu"
+      },
+      "date": "2019-07-08T11:14:44.000+09:00",
+      "id": "ec44ec9aeda4e0effa5737f968fdafe35621b5c4",
+      "message": "git push test\n",
+      "refs": "",
+      "space": 1,
+      "time": 71,
+      "parents": [
+        [
+          "3e44c7bee9a1a78bd916a85bcf0d44b9671433b2",
+          1
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-08T11:14:37.000+09:00",
+      "id": "77a99a45ad09ff552e76e7030fbe2a80ba589a27",
+      "message": "commit not push\n",
+      "refs": "",
+      "space": 3,
+      "time": 72,
+      "parents": [
+        [
+          "fd228672feddc9852a05cb22a9e9763a60fd22d5",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-08T11:13:03.000+09:00",
+      "id": "fd228672feddc9852a05cb22a9e9763a60fd22d5",
+      "message": "Merge branch 'develop' of https://lab.ssafy.com/tlswhd1020/webmobile-sub2 into develop\n",
+      "refs": "",
+      "space": 3,
+      "time": 73,
+      "parents": [
+        [
+          "f9b1e090eb9f41988559da5bcf6b472a6b0d229f",
+          3
+        ],
+        [
+          "3e44c7bee9a1a78bd916a85bcf0d44b9671433b2",
+          5
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "gogumassafy@gmail.com",
+        "icon": "https://secure.gravatar.com/avatar/c0e14db25185fefc04fab0075070e488?s=40&d=wavatar",
+        "name": "JO SEONG-WON"
+      },
+      "date": "2019-07-08T11:12:38.000+09:00",
+      "id": "f9b1e090eb9f41988559da5bcf6b472a6b0d229f",
+      "message": "JSW TEST\n",
+      "refs": "",
+      "space": 3,
+      "time": 74,
+      "parents": [
+        [
+          "99f5a48182586a3912d51c660cc4f6742bc924a3",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "lkkjasd@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/939982f93f54f872b629a76ad5f19eba?s=40&d=wavatar",
+        "name": "YonungWoo"
+      },
+      "date": "2019-07-08T11:11:45.000+09:00",
+      "id": "3e44c7bee9a1a78bd916a85bcf0d44b9671433b2",
+      "message": "yoon | develop pushtest\n",
+      "refs": "",
+      "space": 3,
+      "time": 75,
+      "parents": [
+        [
+          "99f5a48182586a3912d51c660cc4f6742bc924a3",
+          3
+        ]
+      ]
+    },
+    {
+      "author": {
+        "email": "someth00@naver.com",
+        "icon": "https://secure.gravatar.com/avatar/f653aa1ac0fcd2275c703c5b51812bcd?s=40&d=wavatar",
+        "name": "hyungyu"
+      },
+      "date": "2019-07-08T09:40:57.000+09:00",
+      "id": "99f5a48182586a3912d51c660cc4f6742bc924a3",
+      "message": "first commit\n",
+      "refs": "SJ_Test master",
+      "space": 1,
+      "time": 76,
+      "parents": [
+        [
+          "",
+          1
+        ]
+      ]
+    }
+  ],
+  "days": [
+    [
+      12,
+      "Jul"
+    ],
+    [
+      12,
+      "Jul"
+    ],
+    [
+      12,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      11,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      10,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      9,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ],
+    [
+      8,
+      "Jul"
+    ]
+  ]
+}

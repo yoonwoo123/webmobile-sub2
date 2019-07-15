@@ -5,6 +5,11 @@
       <Repository :repos="repositories[i - 1]"></Repository>
       <v-divider></v-divider>
     </v-flex>
+
+    <v-flex mt-2 xs12 class="hidden-xs-only">
+      <h2>Commit Graph</h2>
+      <div class="network-graph" data-url="./gitlab-network-graph/.data/data.json" data-commit-url="https://lab.ssafy.com/tlswhd1020/webmobile-sub2/commit/%s"></div>
+    </v-flex>
   </v-layout>
 </template>
 
@@ -27,7 +32,7 @@ export default {
 		Repository
 	},
 	mounted() {
-		this.getGitlabRepos('hackurity01')
+		this.getGitlabRepos('hyungyu')
 	},
 	methods: {
 		async getGitlabRepos(userName) {
