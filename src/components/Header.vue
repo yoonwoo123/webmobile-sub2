@@ -22,7 +22,10 @@
       <!-- <v-btn flat router :to="{name:'project'}" exact><strong>Project</strong></v-btn> -->
     </v-toolbar-items>
 
-    <!-- Login modal pop -->
+
+
+
+    <!-- Login modal pop - by sj-->
 
     <v-btn v-if="name == null" class="hidden-sm-and-down" fab small>
       <v-icon size='25px' color="deep-orange" @click="dialog=true">fa-user-circle</v-icon>
@@ -90,9 +93,6 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-
-
-
     <v-btn class="hidden-sm-and-down" fab small @click="alertBookmark"><v-icon size='25px' color="yellow darken-1">fa-star</v-icon></v-btn>
     <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer">
     </v-toolbar-side-icon>
@@ -101,20 +101,17 @@
   <v-navigation-drawer v-model="drawer" fixed temporary right >
   <v-toolbar flat>
     <v-icon color='pink' size="30px" @click.stop="drawer = !drawer">fa-chevron-circle-right</v-icon>
-    <v-list>
-      <v-list-tile>
-        <v-list-tile-title class="title" style="height:auto;">
-          <v-toolbar-title v-if="name!=null" @click="$router.push({name:'home'})"  class="profile-toolbar">
-              <div class="profile_icon profile-div">
-                <img v-if="img!=null" :src="img" class="profile-img"/>
-                <img v-if="img==null" src="/img/icons/apple-touch-icon.png" class="profile-img"/>
-                <span class="profile-name">{{name}}</span>
-              </div>
-          </v-toolbar-title>
 
-        </v-list-tile-title>
-      </v-list-tile>
-    </v-list>
+    <v-list-tile-title class="title" style="height:auto;">
+      <v-toolbar-title v-if="name!=null" @click="$router.push({name:'home'})"  class="profile-toolbar">
+          <div class="profile_icon profile-div">
+            <img v-if="img!=null" :src="img" class="profile-img"/>
+            <img v-if="img==null" src="/img/icons/apple-touch-icon.png" class="profile-img"/>
+            <span class="profile-name">{{name}}</span>
+          </div>
+      </v-toolbar-title>
+
+    </v-list-tile-title>
     <v-btn v-if="name == null" fab small>
       <v-icon size='25px' color="deep-orange" @click="dialog=true">fa-user-circle</v-icon>
     </v-btn>
@@ -212,35 +209,50 @@ export default {
     },
     async loginWithGoogle() {
 			const result = await FirebaseService.loginWithGoogle()
-      this.$session.start()
-      this.$session.set("name",result.user.displayName)
-      this.$session.set("img",result.user.photoURL)
-      this.name = this.$session.get("name")
-      this.img = this.$session.get("img")
-      console.log(this.name)
-      console.log(this.img)
-      this.hideModal()
-      this.$router.push({name:'home'})
+      if(result != null){
+        this.$session.start()
+        this.$session.set("name",result.user.displayName)
+        this.$session.set("img",result.user.photoURL)
+        this.name = this.$session.get("name")
+        this.img = this.$session.get("img")
+        console.log(this.name)
+        console.log(this.img)
+        this.hideModal()
+        this.$router.push({name:'home'})
+      } else{
+        alert(" 회원정보가 일치하지 않습니다.")
+      }
 		},
     async loginWithFacebook() {
 			const result = await FirebaseService.loginWithFacebook()
-      this.$session.start()
-      this.$session.set("name",result.user.displayName)
-      this.$session.set("img",result.user.photoURL)
-      this.name = this.$session.get("name")
-      this.img = this.$session.get("img")
-      console.log(this.name)
-      console.log(this.img)
-      this.hideModal()
-      this.$router.push({name:'home'})
+      if(result != null){
+        this.$session.start()
+        this.$session.set("name",result.user.displayName)
+        this.$session.set("img",result.user.photoURL)
+        this.name = this.$session.get("name")
+        this.img = this.$session.get("img")
+        console.log(this.name)
+        console.log(this.img)
+        this.hideModal()
+        this.$router.push({name:'home'})
+      } else {
+        alert("회원정보가 일치하지 않습니다.")
+      }
 		},
     async loginWithMail() {
       const result = await FirebaseService.loginWithEmail(this.email, this.password)
-      this.$session.set("name",result.user.displayName)
-      this.$session.set("img",result.user.photoURL)
-      this.name = this.$session.get("name")
-      this.img = this.$session.get("img")
-      console.log(result)
+
+      if(result != null){
+        this.$session.set("name",result.user.displayName)
+        this.$session.set("img",result.user.photoURL)
+        this.name = this.$session.get("name")
+        this.img = this.$session.get("img")
+        console.log(result)
+        alert(this.name + " 회원님 환영합니다.")
+      } else {
+        alert("회원정보가 일치하지 않습니다.")
+      }
+
       this.hideModal()
     },
     async signUp(){
