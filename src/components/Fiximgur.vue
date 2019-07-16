@@ -31,6 +31,7 @@ export default {
         });
       }
     },
+  // 0716
   //   mounted() {
   //   function uploadImageByImgur(file, callback) {
   //       var form = new FormData();
