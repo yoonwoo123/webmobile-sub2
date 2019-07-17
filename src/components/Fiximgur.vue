@@ -1,31 +1,37 @@
 <template>
-  <div class="up">
-    <img id="image" :src="url" style="width: 200px; height: auto;"/>
-    <v-text-field label="Select Image" @click='pickFile' v-model='imageName' prepend-icon='attach_file'></v-text-field>
-    <input name="img" ref="inputFile" type="file" style="display: none" @change="onFileChagne"/>
+  <div id="app">
+    <button v-on:click="uploadImage">uploadImage</button>
   </div>
 </template>
 
 <script type="text/javascript">
 export default {
-    name: 'Imgur',
+    name: 'Fiximgur',
     data () {
       return {
-        imageName: '',
-        url: 'http://dy.gnch.or.kr/img/no-image.jpg'
+        imageName: ''
       }
     },
     methods: {
       pickFile() {
         this.$refs.inputFile.click()
       },
-      onFileChagne(e) {
-        const file = e.target.files[0];
-        this.imageName = file.name;
-        this.url = URL.createObjectURL(file);
-        this.$emit('pass', file);
+
+      uploadImage: function() {
+        axios.post('https://api.imgur.com/3/image/', {
+          headers: {
+            "Authorization": "Client-ID 6c4e7e9374b1faf"
+          }
+        })
+        .then(function(response) {
+          console.log(response);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
       }
     },
+  // 0716
   //   mounted() {
   //   function uploadImageByImgur(file, callback) {
   //       var form = new FormData();
@@ -57,16 +63,27 @@ export default {
   //   */
   //
   //   $(document).ready(function(){ // document가 모두 로드되면 실행됨
+  //
   //     $("input[name=img]").change(function(){// 사용자가 파일을 변경했을때 발생됨
+  //
   //       var file = this.files[0];
+  //
   //       uploadImageByImgur(file, function(result){
+  //
   //         console.log(result);
+  //
   //         console.log('업로드결과:'+result.status);
+  //
   //         if(result.status!=200){
+  //
   //         result = $.parseJSON(result.responseText);
+  //
   //         }
+  //
   //         if(result.data.error){
+  //
   //         console.log('지원하지않는 파일형식..');
+  //
   //         }else{
   //         var image = document.getElementById('image');
   //         this.imageName = file.name;

@@ -67,7 +67,9 @@ export default {
 			name,
 			path,
 			time: firebase.firestore.FieldValue.serverTimestamp()
-		})
+		}).catch(function(error) {
+			console.log("[Error Message] : "+ error)
+		});
 	},
 	loginWithGoogle() {
 		let provider = new firebase.auth.GoogleAuthProvider()

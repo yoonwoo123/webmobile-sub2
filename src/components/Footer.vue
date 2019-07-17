@@ -1,8 +1,17 @@
 <template>
   <v-footer dark class="pa-3">
     <span>{{ weather }}  <font-awesome-icon icon="temperature-high" /> {{ temperature }}'C   <font-awesome-icon icon="tint" /> {{ humidity }}%</span>
+  <v-footer class="pa-4" style="background:darkgrey !important;">
+    <img :src="weatherIconUrl" alt="weather icon" height='50px'>
+    <span>
+       {{ weather }}
+      <font-awesome-icon icon="temperature-high" /> {{ temperature }}'C
+      <font-awesome-icon icon="tint" /> {{ humidity }}%
+    </span>
     <v-spacer></v-spacer>
-    <div>&copy;2019 — HyunGyu Yoon</div>
+    <a href="https://lab.ssafy.com/tlswhd1020/webmobile-sub2"><font-awesome-icon :icon="['fab', 'gitlab']" /></a>
+    <v-spacer></v-spacer>
+    <div>&copy;2019 — HPHK</div>
   </v-footer>
 </template>
 
@@ -20,6 +29,7 @@ export default {
   },
   methods: {
     getTemperature: function () {
+    getWeather: function () {
       const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=Seoul&units=metric&lang=kr&appid=9605cf8a9a7b4126fb57deb954cac4d5'
       axios.get(weatherUrl)
         .then(response => response.data)

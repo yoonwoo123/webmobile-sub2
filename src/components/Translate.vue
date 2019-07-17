@@ -39,6 +39,7 @@ export default {
     }
   },
   methods: {
+    // axios request
     translate () {
       axios.post('https://translation.googleapis.com/language/translate/v2', null, {params: {
         q: this.inputString,
