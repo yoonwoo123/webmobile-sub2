@@ -58,7 +58,7 @@
           <v-spacer></v-spacer>
           <v-btn color="blue darken-1" flat @click="dialog = false">Cancel</v-btn>
           <v-btn color="blue darken-1" flat @click="showRegister">Account</v-btn>
-          <v-btn color="blue darken-1" flat @click="loginWithMail">Login</v-btn>
+          <v-btn color="blue darken-1" flat @click="loginWithMail" @keyup.enter="loginWithMail">Login</v-btn>
           <!-- <v-btn color="blue darken-1" flat @click="logout">logout</v-btn> -->
           <!-- <v-btn color="blue darken-1" flat @click="loginCheck">check</v-btn> -->
         </v-card-actions>
@@ -154,7 +154,7 @@
 
 <script>
 import FirebaseService from '@/services/FirebaseService'
-
+//commit test
 export default {
   name: 'Header',
   data () {
@@ -242,20 +242,24 @@ export default {
       }
 		},
     async loginWithMail() {
-      const result = await FirebaseService.loginWithEmail(this.email, this.password)
 
-      if(result != null){
-        this.$session.set("name",result.user.displayName)
-        this.$session.set("img",result.user.photoURL)
-        this.name = this.$session.get("name")
-        this.img = this.$session.get("img")
-        console.log(result)
-        alert(this.name + " 회원님 환영합니다.")
-      } else {
-        alert("회원정보가 일치하지 않습니다.")
+      if(this.email !=null && this.password !=null){
+        const result = await FirebaseService.loginWithEmail(this.email, this.password)
+        if(result != null){
+          this.$session.set("name",result.user.displayName)
+          this.$session.set("img",result.user.photoURL)
+          this.name = this.$session.get("name")
+          this.img = this.$session.get("img")
+          console.log(result)
+          this.hideModal()
+          alert(this.name + " 회원님 환영합니다.")
+        } else {
+          alert("회원정보가 일치하지 않습니다.")
+        }
       }
-
-      this.hideModal()
+      else{
+        alert("로그인정보를 확인해주세요.")
+      }
     },
     async signUp(){
       if(this.cname !=null && this.cemail !=null && this.cpassword !=null){
