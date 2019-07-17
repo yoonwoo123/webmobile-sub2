@@ -41,7 +41,7 @@ export default {
         data: form
       })
       .then( response => {
-        FirebaseService.postPortfolio(this.title, this.body, response['data']['data']['link'])
+        return FirebaseService.postPortfolio(this.title, this.body, response['data']['data']['link'])
       })
       .then(() => this.$router.go(-1))
       .catch( response => { console.log(response) });
