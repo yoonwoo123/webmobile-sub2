@@ -1,4 +1,4 @@
-# ssafy_8조 해피해킹
+# SSAFY_8조 해피해킹
 
 ## Project setup
 ```
