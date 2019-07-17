@@ -1,6 +1,4 @@
 <template>
-  <v-footer dark class="pa-3">
-    <span>{{ weather }}  <font-awesome-icon icon="temperature-high" /> {{ temperature }}'C   <font-awesome-icon icon="tint" /> {{ humidity }}%</span>
   <v-footer class="pa-4" style="background:darkgrey !important;">
     <img :src="weatherIconUrl" alt="weather icon" height='50px'>
     <span>
@@ -25,10 +23,10 @@ export default {
       temperature: '',
       weather:'',
       humidity:'',
+      weatherIconUrl:'',
     }
   },
   methods: {
-    getTemperature: function () {
     getWeather: function () {
       const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=Seoul&units=metric&lang=kr&appid=9605cf8a9a7b4126fb57deb954cac4d5'
       axios.get(weatherUrl)
@@ -37,13 +35,13 @@ export default {
             this.temperature = data.main.temp
             this.weather = data.weather[0].description
             this.humidity = data.main.humidity
+            let weatherIcon = data.weather[0].icon
+            this.weatherIconUrl = 'http://openweathermap.org/img/wn/' + weatherIcon + '@2x.png'
           })
-          // .then(data => this.temperature = data.main.temp)
-            // .then(data => this.weather = data)
     }
   },
   mounted: function () {
-    this.getTemperature()
+    this.getWeather()
   },
 }
 </script>

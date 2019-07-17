@@ -34,8 +34,6 @@ export default {
     post:function(){
       var form = new FormData();
       form.append('image', this.file);
-      // let file = this.file;
-      // axios.post('https://api.imgur.com/3/image', { image: file }, { headers: { Authorization: 'Client-ID 546c25a59c58ad7' }})
       axios({
         method: 'post',
         url: 'https://api.imgur.com/3/image',
@@ -43,11 +41,13 @@ export default {
         data: form
       })
       .then( response => {
-        // console.log(response['data']['data']['link']);
         FirebaseService.postPortfolio(this.title, this.body, response['data']['data']['link'])
+
+      })
+      .then ( response => {
+        this.$router.go(-1)
       })
       .catch( response => { console.log(response) });
-      // FirebaseService.postPortfolio(this.title, this.body, response['data']['data']['link'])
     },
     deliverFile (image) {
       this.file = image;
