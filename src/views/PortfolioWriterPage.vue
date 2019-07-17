@@ -42,11 +42,8 @@ export default {
       })
       .then( response => {
         FirebaseService.postPortfolio(this.title, this.body, response['data']['data']['link'])
-
       })
-      .then ( response => {
-        this.$router.go(-1)
-      })
+      .then(() => this.$router.go(-1))
       .catch( response => { console.log(response) });
     },
     deliverFile (image) {
