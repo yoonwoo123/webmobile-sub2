@@ -7,6 +7,6 @@ export default new Vuex.Store({
   state: {
 		accessToken: "",
 		user: "",
-    imgSrc:"https://source.unsplash.com/1600x900/?newyork"
+    imgSrc:"https://source.unsplash.com/1600x900/?newyork" // 배너 이미지 url
   }
 })
