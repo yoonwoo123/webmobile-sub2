@@ -19,6 +19,7 @@ export default {
     Translate
   },
   mounted () {
+    // 페이지 이동시에 DB에 로그를 남김.
     FirebaseService.logging(this.$session.get("name"), this.$route['path'])
   }
 }
