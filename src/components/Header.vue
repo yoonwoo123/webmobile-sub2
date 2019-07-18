@@ -242,7 +242,6 @@ export default {
       }
 		},
     async loginWithMail() {
-
       if(this.email !=null && this.password !=null){
         const result = await FirebaseService.loginWithEmail(this.email, this.password)
         if(result != null){
