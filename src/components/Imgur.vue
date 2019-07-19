@@ -2,7 +2,7 @@
   <div class="up">
     <img id="image" :src="url" style="width: 200px; height: auto;"/>
     <v-text-field label="Select Image" @click='pickFile' v-model='imageName' prepend-icon='attach_file'></v-text-field>
-    <input name="img" ref="inputFile" type="file" style="display: none" @change="onFileChagne"/>
+    <input name="img" ref="inputFile" type="file" accept="image/x-png,image/gif,image/jpeg" style="display: none" @change="onFileChagne"/>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
     data () {
       return {
         imageName: '',
-        url: 'http://dy.gnch.or.kr/img/no-image.jpg'
+        url: 'https://dy.gnch.or.kr/img/no-image.jpg'
       }
     },
     methods: {
