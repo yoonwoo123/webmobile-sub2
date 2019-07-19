@@ -43,7 +43,7 @@
         <v-icon size="25px" color="deep-orange" @click="dialog=true">fa-user-circle</v-icon>
       </v-btn>
 
-      <!-- login form -->
+      <!-- login form with modal-->
       <v-dialog v-model="dialog" persistent max-width="600px">
         <v-card>
           <v-card-title>
@@ -62,13 +62,14 @@
             </v-container>
             <small>*indicates required field</small>
           </v-card-text>
+          <!-- Google login  -->
           <v-btn round dark v-on:click="loginWithGoogle">
             <v-icon size="25" class="mr-2">fa-google</v-icon>Google 로그인
           </v-btn>
+          <!-- Facebook login -->
           <v-btn color="primary" round dark v-on:click="loginWithFacebook">
             <v-icon size="25" class="mr-2">fa-facebook</v-icon>Facebook 로그인
           </v-btn>
-          <!-- <v-facebook-login app-id="966242223397117"></v-facebook-login> -->
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn color="blue darken-1" flat @click="dialog = false">Cancel</v-btn>
@@ -85,7 +86,7 @@
         </v-card>
       </v-dialog>
 
-      <!-- register form -->
+      <!-- register form with modal-->
       <v-dialog v-model="dialog2" persistent max-width="600px">
         <v-card>
           <v-card-title>
@@ -193,13 +194,13 @@ export default {
         { title: "Translate", icon: "fa-language", name: "translate" }
         // { title: 'Project', icon: 'fa-git-square' ,name:'project'}
       ],
-      dialog: false,
+      dialog: false,    //MODAL DATA
       dialog2: false,
-      email: null,
+      email: null,      // LOGIN DATA
       password: null,
       name: null,
       img: null,
-      cname: null,
+      cname: null,      // REGISTER DATA
       cemail: null,
       cpassword: null
     };
@@ -237,22 +238,6 @@ export default {
           var errorMessage = error.message;
         });
     },
-    async loginWithGoogle() {
-      const result = await FirebaseService.loginWithGoogle();
-      if (result != null) {
-        this.$session.start();
-        this.$session.set("name", result.user.displayName);
-        this.$session.set("img", result.user.photoURL);
-        this.name = this.$session.get("name");
-        this.img = this.$session.get("img");
-        console.log(this.name);
-        console.log(this.img);
-        this.hideModal();
-        this.$router.push({ name: "home" });
-      } else {
-        alert(" 회원정보가 일치하지 않습니다.");
-      }
-    },
     async loginWithFacebook() {
       const result = await FirebaseService.loginWithFacebook();
       if (result != null) {
@@ -267,6 +252,22 @@ export default {
         this.$router.push({ name: "home" });
       } else {
         alert("회원정보가 일치하지 않습니다.");
+      }
+    },
+    async loginWithGoogle() {
+      const result = await FirebaseService.loginWithGoogle();
+      if (result != null) {
+        this.$session.start();
+        this.$session.set("name", result.user.displayName);
+        this.$session.set("img", result.user.photoURL);
+        this.name = this.$session.get("name");
+        this.img = this.$session.get("img");
+        console.log(this.name);
+        console.log(this.img);
+        this.hideModal();
+        this.$router.push({ name: "home" });
+      } else {
+        alert(" 회원정보가 일치하지 않습니다.");
       }
     },
     async loginWithMail() {
@@ -306,6 +307,7 @@ export default {
     async logout() {
       this.name = null;
       this.img = null;
+      this.password = null;
       FirebaseService.logout("logout Success");
       this.$session.destroy();
       this.$router.push("/");
