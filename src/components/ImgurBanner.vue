@@ -1,7 +1,7 @@
 <template>
   <div class="filebox">
     <!-- <ImgBanner v-bind:res="res"></ImgBanner> -->
-    <input ref="inputFile" id="ex-file" name="img" type="file" style="display: none;" @change="onFileChagne"/>
+    <input ref="inputFile" id="ex-file" name="img" type="file" accept="image/x-png,image/gif,image/jpeg" style="display: none;" @change="onFileChagne"/>
     <v-btn @click="randomimage">랜덤 배너</v-btn>
     <v-btn @click="pickFile">배너 바꾸기</v-btn>
   </div>

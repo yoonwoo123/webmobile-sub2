@@ -7,7 +7,7 @@
         <Imgur v-on:pass="deliverFile"></Imgur>
         <markdown-editor v-model="body" ref="markdownEditor"></markdown-editor>
         <v-btn color="blue-grey lighten-4" @click="post">등록하기</v-btn>
-        <v-btn>취소</v-btn>
+        <v-btn @click="cancle">취소</v-btn>
       </v-flex>
     </v-layout>
   </v-container>
@@ -48,6 +48,9 @@ export default {
     },
     deliverFile (image) {
       this.file = image;
+    },
+    cancle () {
+      this.$router.go(-1)
     }
   },
   mounted () {
