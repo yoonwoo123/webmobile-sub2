@@ -1,4 +1,4 @@
-# SSAFY_8조  해피해킹
+# SSAFY_8조 해피해킹
 
 ## Project setup
 ```
@@ -18,6 +18,3 @@ npm run serve
 ```
 npm run build
 ```
-
-
-
