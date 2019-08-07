@@ -3,7 +3,7 @@
     <!-- <Header></Header> -->
     <ImgBanner id="image" class="">
       <div style="line-height:1.2em;" slot="text" class="display-3 font-weight-black">
-        <strong style="font-size:10vw">Stay hungry,<br> Stay foolish!</strong>
+        <strong style="font-size:10vw">Happy<br>Hacking</strong>
       </div>
     </ImgBanner>
     <ImgurBanner></ImgurBanner>
