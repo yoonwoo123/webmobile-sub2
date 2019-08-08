@@ -1,5 +1,6 @@
 <template>
   <v-footer class="pa-4" style="background:darkgrey !important;">
+    <span>{{ location }}</span>
     <img :src="weatherIconUrl" alt="weather icon" height='50px'>
     <span>
        {{ weather }}
@@ -24,11 +25,30 @@ export default {
       weather:'',
       humidity:'',
       weatherIconUrl:'',
+      lat:'',
+      lng:'',
+      location:'',
     }
   },
   methods: {
+    getCoordinates: function () {
+      const geoUrl = 'https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBPn0uvnjlPyULuSEvqxW3A5C3jeNTbyVY'
+      axios.post(geoUrl)
+        .then(response => response.data)
+          .then((data) => {
+            this.lng = data.location.lng
+            this.lat = data.location.lat
+            this.getWeather()
+            const getLocation = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${this.lat},${this.lng}&key=AIzaSyBPn0uvnjlPyULuSEvqxW3A5C3jeNTbyVY&lang=ko`
+            axios.get(getLocation)
+              .then(response => response.data)
+                .then((data) => {
+                  this.location = data.results[7].address_components[0].long_name
+                })
+          })
+    },
     getWeather: function () {
-      const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=Seoul&units=metric&lang=kr&appid=9605cf8a9a7b4126fb57deb954cac4d5'
+      const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${this.lat}&lon=${this.lng}&units=metric&lang=kr&appid=9605cf8a9a7b4126fb57deb954cac4d5`
       axios.get(weatherUrl)
         .then(response => response.data)
           .then((data) => {
@@ -41,7 +61,7 @@ export default {
     }
   },
   mounted: function () {
-    this.getWeather()
+    this.getCoordinates()
   },
 }
 </script>
