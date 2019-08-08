@@ -29,7 +29,7 @@ public class MemberController {
 	
 	@GetMapping("selectAll")
 	public List<MemberDTO> selectAll(){
-		System.out.println("selectAll");
+		System.out.println("Members : selectAll");
 		return service.selectAll();
 	}
 	
